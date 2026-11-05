@@ -73,6 +73,7 @@
         font-weight: bold;
         margin-top: 10px;
         color: #2c3e50;
+        font-size: 1.3rem;
     }
 
     main ol li ul li.desc {
@@ -84,6 +85,7 @@
         color: #eee;
         padding: 10px 15px;
         border-radius: 5px;
+        font-size: 0.8rem;
     }
 
     footer {
