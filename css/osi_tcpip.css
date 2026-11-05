@@ -53,7 +53,7 @@
     }
 
     main {
-        padding: 20px 40px;
+        padding: 20px;
         font-size: 1rem;
         line-height: 1.6;
         color: #333;
@@ -66,23 +66,23 @@
 
     main h1 {
         color: #2c3e50;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     main table {
         width: 100%;
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     main table td.osi_titulo, td.tcpip_titulo {
         text-align: center;
         font-weight: bold;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     main table td {
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     main table td.osi {
@@ -90,11 +90,13 @@
         background-color:cornflowerblue;
         color: brown;
         font-weight: bold;
+        font-size: 0.7rem;
     }
 
     main table td.divisor {
         text-align: center;
         font-weight: bold;
+        font-size: 0.7rem;
     }
 
     main table td.tcpip {
@@ -102,6 +104,7 @@
         background-color: brown;
         color: #fff;
         font-weight: bold;
+        font-size: 0.7rem;
     }
 
     footer {
