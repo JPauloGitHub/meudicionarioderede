@@ -20,6 +20,8 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color:brown;
+    color: #fff;
 }
 
 main {
@@ -57,7 +59,7 @@ main ul li a span {
     padding: 5px 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    color:blueviolet;
+    color:brown;
 }
 
 footer {
@@ -68,4 +70,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    color: brown;
+    font-size: 0.8rem;
 }
