@@ -22,6 +22,7 @@ header {
     align-items: center;
     background-color:brown;
     color: #fff;
+    font-size: 0.8rem;
 }
 
 main {
@@ -72,5 +73,5 @@ footer {
     align-items: center;
 
     color: brown;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
