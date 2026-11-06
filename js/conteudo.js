@@ -4,7 +4,7 @@ const topicosRedes = {
         titulo: "IP Internet Protocol",
         categoria: "CAMADA DE REDE",
         conteudo: `
-        
+
         <p> 
             O IP é o sistema usado para identificar dispositivos em uma rede e permitir
             que eles se comuniquem. Pense nele como um endereço postal da internet:
@@ -17,7 +17,7 @@ const topicosRedes = {
             <ul>
                 <li> IPv4: formato mais comum, como 192.168.1.1 </li>
                 <li> IPv6: formato mais novo, criado para suportar muitos dispositivos, como
-                     2001:0db8:85a3:0000:0000:8a2e:0370:7334 </li>
+                     2001:0db8:85a3:0000:0000:<br />8a2e:0370:7334 </li>
             </ul>
 
         <h3> IP público e IP privado: </h3>
