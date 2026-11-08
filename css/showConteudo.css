@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*@media screen and (max-width: 780px) {}*/
+
+html, body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:brown;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    color: brown;
+    padding: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main span.voltar {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: brown;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    cursor: pointer;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+}
+
+main h1 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+main span {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+main div#corpo-conteudo {
+    width: 100%;
+}
+
+main div#corpo-conteudo p {
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+
+main div#corpo-conteudo h3 {
+    margin: 20px 0;
+}
+
+main div#corpo-conteudo ul, ol {
+    margin-left: 20px;
+    width: 100%;
+}
+
+main div#corpo-conteudo ul, ol li {
+    color: #333;
+    overflow-wrap: break-word;
+}
+
+footer {
+    width: 100%;
+    height: 5vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: brown;
+    font-size: 0.6rem;
+}

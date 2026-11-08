@@ -1,19 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-    //Captura os paramentros transmitidos pela URL (ex: ?id=ip)
+const topicosRede = {
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const idTopico = urlParams.get("id");
 
-    const dados = topicosRedes[idTopico];
+    "fundamentosderede": {
+        titulo: "Fundamentos de Rede",
+        conteudo: `
 
-    if(dados) {
-        document.getElementById("page-titulo").textContent = dados.titulo;
-        document.getElementById("categoria-topico").textContent = dados.categoria;
-        document.getElementById("titulo-topico").textContent = dados.titulo;
-        document.getElementById("corpo-topico").innerHTML = dados.conteudo;
-    }else {
-        document.getElementById("titulo-topico").textContent = "Tópico não encontrado";
-        document.getElementById("corpo-topico").innerHTML = "<p> O estudo solicitado não existe ou foi removido</p>";
+        <ul>
+            <li><a href=""><span> CONCEITOS BÁSICOS/ </span></a></li>
+            <li><a href=""><span> LAN/ WAN/ MAN/ PAN </span></a></li>
+            <li><a href=""><span> TOPOLOGIAS DE REDE/ </span></a></li>
+            <li><a href=""><span> LARGURA DE BANDA E LATÊNCIA/ </span></a></li>
+            <li><a href=""><span> MEIOS DE TRANSMISSÃO </span></a></li>
+        </ul>
+        `
     }
-        
-});
+
+}

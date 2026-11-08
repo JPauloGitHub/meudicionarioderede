@@ -1,4 +1,4 @@
-const topicosRedes = {
+const conteudoRede = {
 
 
     "ip": {
