@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if(dados) {
         document.getElementById("page-titulo").textContent = dados.titulo;
+        document.getElementById("page-titulo-h2").textContent = dados.titulo;
         document.getElementById("corpo-topico").innerHTML = dados.conteudo;
     }else {
         document.getElementById("titulo-topico").textContent = "Tópico não encontrado";
