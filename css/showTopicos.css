@@ -32,7 +32,7 @@ html, body {
         padding: 50px;
         
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -75,6 +75,7 @@ html, body {
     main div#corpo-topico ul li {
         list-style: none;
         margin-top: 10px;
+        width: 90%;
     }
 
     main div#corpo-topico ul li a {
@@ -82,10 +83,15 @@ html, body {
     }
 
     main div#corpo-topico ul li a span {
-        padding: 5px 10px;
+        display: block;
         font-size: 1rem;
         font-weight: bold;
-        color:brown;
+        color: white;
+        text-align: center;
+        background-color: brown;
+        padding: 10px 10px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     footer {
