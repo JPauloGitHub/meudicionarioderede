@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if(dados) {
         document.getElementById("page-titulo").textContent = dados.titulo;
-        document.getElementById("categoria-topico").textContent = dados.categoria;
-        document.getElementById("titulo-topico").textContent = dados.titulo;
+        document.getElementById("titulo-conteudo").textContent = dados.titulo;
         document.getElementById("corpo-conteudo").innerHTML = dados.conteudo;
     }else {
-        document.getElementById("titulo-topico").textContent = "Tópico não encontrado";
+        document.getElementById("titulo-conteudo").textContent = "Tópico não encontrado";
         document.getElementById("corpo-conteudo").innerHTML = "<p> O estudo solicitado não existe ou foi removido</p>";
     }
         

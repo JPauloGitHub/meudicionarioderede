@@ -53,18 +53,12 @@ main span.voltar {
     cursor: pointer;
     position: absolute;
     left: 50px;
-    top: 100px;
+    top: 60px;
 }
 
 main h1 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-main span {
-    margin-bottom: 40px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    margin: 80px 0 30px 0;
+    font-size: 1.4rem;
 }
 
 main div#corpo-conteudo {
@@ -72,25 +66,23 @@ main div#corpo-conteudo {
 }
 
 main div#corpo-conteudo p {
-    color: #333;
+    color: #000;
     text-align: justify;
     margin-bottom: 20px;
     padding: 10px;
     overflow-wrap: break-word;
+    font-weight: bold;
 }
 
-main div#corpo-conteudo h3 {
-    margin: 20px 0;
+main div#corpo-conteudo h4 {
+    margin: 30px 0;
 }
 
-main div#corpo-conteudo ul, ol {
-    margin-left: 20px;
-    width: 100%;
-}
-
-main div#corpo-conteudo ul, ol li {
-    color: #333;
+main div#corpo-conteudo ul ol, li {
+    color: #000;
     overflow-wrap: break-word;
+    font-weight: bold;
+    margin: 10px 10px;
 }
 
 footer {
@@ -104,4 +96,5 @@ footer {
 
     color: brown;
     font-size: 0.6rem;
+    font-weight: bold;
 }
