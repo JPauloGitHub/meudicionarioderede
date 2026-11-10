@@ -85,6 +85,15 @@ main div#corpo-conteudo ul ol, li {
     margin: 10px 10px;
 }
 
+main div#corpo-conteudo table {
+    width: 100%;
+    margin-top: 50px;
+}
+
+main div#corpo-conteudo table td {
+    font-size: 0.6rem;
+}
+
 footer {
     width: 100%;
     height: 5vh;

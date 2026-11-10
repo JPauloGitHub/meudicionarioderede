@@ -6,10 +6,10 @@ const topicosRede = {
 
         <ul>
             <li><a href="conteudo.html?id=conceitosbasicos"><span> CONCEITOS BÁSICOS </span></a></li>
-            <li><a href=""><span> LAN/ WAN/ MAN/ PAN </span></a></li>
-            <li><a href=""><span> TOPOLOGIAS DE REDE </span></a></li>
-            <li><a href=""><span> LARGURA DE BANDA E LATÊNCIA </span></a></li>
-            <li><a href=""><span> MEIOS DE TRANSMISSÃO </span></a></li>
+            <li><a href="conteudo.html?id=lanwanmanpan"><span> LAN/ WAN/ MAN/ PAN </span></a></li>
+            <li><a href="conteudo.html?id=topologiasderede"><span> TOPOLOGIAS DE REDE </span></a></li>
+            <li><a href="conteudo.html?id=larguradebandaelatencia"><span> LARGURA DE BANDA E LATÊNCIA </span></a></li>
+            <li><a href="conteudo.html?id=meiosdetransmissao"><span> MEIOS DE TRANSMISSÃO </span></a></li>
         </ul>
         `
     },
@@ -19,8 +19,8 @@ const topicosRede = {
         conteudo: `
 
         <ul>
-            <li><a href=""><span> MODELO OSI </span></a></li>
-            <li><a href=""><span> MODELO TCP/IP </span></a></li>
+            <li><a href="conteudo.html?id=modeloosi"><span> MODELO OSI </span></a></li>
+            <li><a href="conteudo.html?id=modelotcpip"><span> MODELO TCP/IP </span></a></li>
         </ul>
         `
     },

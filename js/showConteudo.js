@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dados = conteudoRede[idConteudo];
 
+    
     if(dados) {
         document.getElementById("page-titulo").textContent = dados.titulo;
+        document.getElementById("page-titulo-h2").textContent = dados.titulo;
         document.getElementById("titulo-conteudo").textContent = dados.titulo;
         document.getElementById("corpo-conteudo").innerHTML = dados.conteudo;
     }else {
