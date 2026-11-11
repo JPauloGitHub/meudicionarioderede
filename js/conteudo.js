@@ -1,5 +1,6 @@
 const conteudoRede = {
 
+/*****                    Aqui começar os fundamentos de rede              ***********/
 
     "conceitosbasicos": {
         titulo: "Conceitos Básicos",
@@ -122,6 +123,8 @@ const conteudoRede = {
 
         `
     },
+
+    /******************************************************************************************************** */
 
 
     "lanwanmanpan": {
@@ -256,6 +259,7 @@ const conteudoRede = {
         `
     },
 
+    /************************************************************************************************************ */
 
     "topologiasderede": {
         titulo: "Topologias de Rede",
@@ -495,6 +499,8 @@ const conteudoRede = {
         `
     },
 
+    /******************************************************************************************* */
+
 
     "larguradebandaelatencia": {
         titulo: "Largura de banda e Latência",
@@ -601,6 +607,8 @@ const conteudoRede = {
 
         `
     },
+
+    /******************************************************************************************* */
 
 
     "meiosdetransmissao": {
@@ -927,37 +935,174 @@ const conteudoRede = {
             </li>
         </ul>
 
-        <table>
-            <tr>
-                <td> Resumo Comparativo</td>
-            </tr>
-            <tr>
-                <td> PAN </td>
-                <td> Personal Area Network </td>
-                <td> 10 metros </td>
-                <td> Bluetooth (fone + celular) </td>
-            </tr>
-            <tr>
-                <td> LAN </td>
-                <td> Local Area Network </td>
-                <td> Um cômodo/prédio </td>
-                <td> Wi-Fi / cabo </td>
-            </tr>
-            <tr>
-                <td> MAN </td>
-                <td> Metropolitan Area Network </td>
-                <td> Uma cidade </td>
-                <td> Fibra óptica interligando bairros </td>
-            </tr>
-            <tr>
-                <td> WAN </td>
-                <td> Wide Area Network </td>
-                <td> Países/Mundo </td>
-                <td> A Internet </td>
-            </tr>
-        </table>
+        <h4> Modelo OSI x Modelo TCP/IP </h4>
+
+        <p>
+            Vale notar que, na prática moderna da internet, 
+            utilizamos mais o Modelo TCP/IP(que consolida essas
+            7 camadas do OSI em apneas 4 camadas mais práticas:
+            Aplicação, Transporte, Internet, e Acesso à Rede).
+            No entanto, o modelo OSI continua sendo a referên-
+            cia teórica fundamental para explicar e estudar
+            como funcionam as redes de computadores.
+        </p>
 
         `
     },
+
+ /******************************************************************************************* */
+    
+    "modelotcpip": {
+        titulo: "Modelo TCP/IP",
+        conteudo: `
+
+        <p>
+            O Modelo TCP/IP(também conhecido como Conjunto de
+            Protocolos da Internet) é a arquitetura prática
+            que sustenta toda a internet e a grande maioria
+            das redes de computadores modernas.
+        </p>
+
+        <p>
+            Enquanto o Modelo OSI, é um modelo conceitual e 
+            teórico de 7 camadas, o TCP/IP foi desenvolvido
+            pelo Departamento de Defesa dos EUA(DARPA) na
+            década de 1970 para ser um modelo funcional,
+            direto e otimizado para a comunicação real.
+        </p>
+
+        <table id="osi-tcp">
+            <tr class="titulo-osi-tcp">
+                <td> Modelo OSI </td>
+                <td> X </td>
+                <td> Modelo TCP/IP </td>
+            </tr>
+            <tr>
+                <td> Aplicação </td>
+                <td rowspan="3"> <====> </td>
+                <td rowspan="3"> Aplicação </td>
+            </tr>
+            <tr>
+                <td> Apresentação </td>
+            </tr>
+            <tr>
+                <td> Sessão </td>
+            </tr>
+            <tr>
+                <td> Transporte </td>
+                <td> <====> </td>
+                <td> Transporte </td>
+            </tr>
+            <tr>
+                <td> Rede </td>
+                <td> <====> </td>
+                <td> Internet </td>
+            </tr>
+            <tr>
+                <td> Enlace </td>
+                <td rowspan="2"> <====> </td>
+                <td rowspan="2"> Acesso a rede </td>
+            </tr>
+            <tr>
+                <td> Física </td>
+            </tr>
+        </table>
+
+        <h4> As 4 Camadas do Modelo TCP/IP </h4>
+
+        <p>
+            O modelo TCP/IP agrupa as funções da rede apenas
+            4 camadas(embora algumas versões da leteratura
+            técnica dividam a camada de acesso à rede em duas,
+            formando 5):
+        </p>
+
+        <h4> 4 Camada de Aplicação </h4>
+
+        <ul>
+            <li>
+                O que faz: Equivalente às camadas de Aplicação,
+                Apresentação e Sessão do Modelo OSI juntas.
+                É onde os aplicativos geram e consomem os dados.
+            </li>
+            <li>
+                Exemplos de Protocolos: HTTP/HTTPS(Web), FTP(arquivos),
+                SMTP/POP3/IMAP(e-mails), DNS(nomes de domínio), SSH e
+                Telnet(acesso remoto).
+            </li>
+        </ul>
+
+        <h4> 3. Camada de Transporte </h4>
+
+        <ul>
+            <li>
+                O que faz: Gerencia a comunicação lógica de ponta a
+                ponta entre os hosts, garantindo a integridde dos
+                dados e controlando o fluxo.
+            </li>
+            <li>
+                Principais Protocolos:
+                <ul>
+                    <li>
+                        TCP(Trasmition Control Protocol): Orientado 
+                        à conexão, confiável, verifica erros, retrans-
+                        mite pacotes perdidos e entrega os dados na
+                        ordem certa.
+                    </li>
+                    <li>
+                        UDP(User Datagram Protocol): Não orientado à
+                        conexão, focado em velocidade, sem garatia
+                        de entrega(ideal para streamng, jogos e ViIP).
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4> 2. Camada de Internet(ou Rede) </h4>
+
+        <ul>
+            <li>
+                O que faz: Responsável pelo endereçamento lógico e pelo
+                roteamento dos pacotes através de diferentes redes
+                (inter-rede). É o coração da conectividade da internt.
+            </li>
+            <li>
+                Principais Protocolos: IP(IPv4 e IPv6), ICMP(usado
+                pelo comoando ping para diagnósticos), ARP(associa
+                IP ao endereço MAC) e protocolos de roteamento(como
+                OSPF e BGP).
+            </li>
+        </ul>
+
+        <h4> 1. Camada de Acesso a Rede(ou Enlace/Física) </h4>
+
+        <ul>
+            <li>
+                O que faz: Combina as camadas de Enlace e Física
+                do Modelo OSI. Cuida de como os dados são colocados
+                fisicamente no meio de transmissão(cabo de rede
+                fibra, Wi-Fi) e da comunicação direta entre dis-
+                positivos na mesma rede local usando endereços MAC.
+            </li>
+            <li>
+                Exemplos de Tecnologias: Ethernet, Wi-Fi(802.11). PPP.
+            </li>
+        </ul>
+
+        <h4> Por que TCP/IP venceu na prática? </h4>
+
+        <p>
+            Enquanto o modelo OSI seviu como uma excelente base
+            de padronização, o TCP/IP se tornou o padrão global
+            absoluto da internet por ser pragmático, flexível e
+            eficiente. Ele não se prende a regras rígidas de
+            separação de software e hardware, permitindo que
+            a infraestrutura da internet crescesse de forma
+            descentralizada e robusta ao longo das décadas.
+        </p>
+
+        `
+    },
+
 
 }

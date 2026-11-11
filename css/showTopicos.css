@@ -75,7 +75,7 @@ html, body {
     main div#corpo-topico ul li {
         list-style: none;
         margin-top: 10px;
-        width: 90%;
+        width: 100%;
     }
 
     main div#corpo-topico ul li a {

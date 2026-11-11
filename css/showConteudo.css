@@ -90,8 +90,23 @@ main div#corpo-conteudo table {
     margin-top: 50px;
 }
 
+main div#corpo-conteudo table#osi-tcp tr.titulo-osi-tcp {
+    font-weight: bold;
+}
+
 main div#corpo-conteudo table td {
     font-size: 0.6rem;
+}
+
+main div#corpo-conteudo table#osi-tcp {
+    width: 100%;
+}
+
+main div#corpo-conteudo table#osi-tcp td {
+    text-align: center;
+    border: 1px #333 solid;
+    font-size: 1rem;
+    border-radius: 3px;
 }
 
 footer {
