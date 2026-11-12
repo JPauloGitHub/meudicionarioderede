@@ -1104,5 +1104,390 @@ const conteudoRede = {
         `
     },
 
+    /************* Aqui começa os Protocolos  ****************/
+
+    
+    "http": {
+        titulo: "Protocolor HTTP",
+        conteudo: `
+
+        <p>
+            O HTTP(HyperText Transfer Protocol ou Protocolo
+            de Transferência de Hipertexto) é o protocolo da 
+            Camada de Aplicação que serve de base para toda
+            a comunicação de dados da Word Wide Web.
+            Sempre que você digita um site no navegador
+            ou clica em um link, é o HTTP(ou versão segura,
+            HTTPS) que permite que o seu navegador (cliente)
+            converse com o servidor web onde o site está
+            hospedado.
+        </p>
+
+        <h4> O Ciclo de Funcionamento: Requisição e Resposta(
+        Request-Response) </h4>
+
+        <p>
+            O funcionamento do HTTP é baseado estritamento no 
+            modelo Cliente-Servidor através de um ciclo de 
+            solicitação e entrega:
+        </p>
+
+        <ul>
+            <li>
+                A Requisição(Request): O seu navegador (cliente)
+                envia uma mensagem para o servidor pedindo
+                um recurso(ex: carregar a página inicial, enviar
+                um formulário de login, buscar um imagem).
+            </li>
+            <li>
+                A Resposta(Response): O servidor processa o pedido
+                e devolve o resultado (ex: o código HTML/CSS da
+                página, um arquivo JSON ou uma mensagem de erro).
+            </li>
+        </ul>
+
+        <h4> Estrutura de uma Requisição HTTP </h4>
+
+        <p>
+            Uma requisição HTTP é composta basicamente por:
+        </p>
+
+        <ul>
+            <li>
+                Método(Verbo HTTP): O que você quer fazer com
+                o recurso.
+            </li>
+            <li>
+                URL(Caminmho): O endereço do recurso no sevidor
+                (ex: /produtos).
+            </li>
+            <li>
+                Cabeçaclho(Headers): Metadados informando 
+                detalhes como o navegador que está acessando,
+                idioma aceito ou tokens de autenticação.
+            </li>
+            <li>
+                Corpo(Body-opcional): Dados enviados ao servidor
+                (usado ao preencher um cadastro, por exemplo).
+            </li>
+        </ul>
+
+        <h4> Os Principais Métodos HTTP(Verbos): </h4>
+
+        <ul>
+            <li>
+                GET: Pede para o servidor trazer(ler) um
+                recurso.(ex: Abrir uma página Web).
+            </li>
+            <li>
+                POST: Envia dados novos para o servidor criar
+                algo.(ex: Cadastrar um usuário ou enviar um
+                comentário).
+            </li>
+            <li>
+                PUT/PATCH: Atualiza um recurso existente no 
+                servidor (PUT substitui o recurso todo; PATCH
+                altera apenas alguns campos).
+            </li>
+            <li>
+                DELETE: Remove um recurso do servidor.
+            </li>
+        </ul>
+
+        <h4> Códigos de Status HTTP(Status Codes) </h4>
+
+        <p>
+            Quando o servidor responde à sua requisição,
+            ele inclui um número de 3 digitos que indica
+            o resultado da operação. Eles são divididos
+            em cinco grandes categorias:
+        </p>
+
+        <ul>
+            <li>
+                1xx(Informativo): A requisição foi recebida
+                e o processo continua.
+            </li>
+            <li>
+                2xx(Sucesso): Tudo ocorreu bem.
+                <ul>
+                    <li>
+                        200 OK: Sucesso padrão.
+                    </li>
+                    <li>
+                        201 Created: Recurso criado com sucesso
+                        (comum em cadastros via POST).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                3xx(Redirecionamento): O cliente precisa executar
+                ações adicionais para concluir a requisição.
+                
+                <ul>
+                    <li>
+                        301 Moved Permanently: O endereço mudou
+                        permanentemente para outra URL.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                4xx(Erro do Cliente): O pedido tem algum erro que 
+                partiu de quem enviou(você).
+
+                <ul>
+                    <li>
+                        400 Bad Request: Requisição mal furmatada.
+                    </li>
+                    <li>
+                        401 Unauthorized: Falta autenticação( você
+                        precisa fazer login).
+                    </li>
+                    <li>
+                        403 Forbidden: Você está logado, mas não tem
+                        permissão para acessar aquilo
+                    </li>
+                    <li>
+                        404 Not Found: O recurso ou página solicitada
+                        não existe no servidor.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                5xx(Erro do Servidor): O cliente enviou tudo center,
+                mas o servidor falhou ao processar.
+
+                <ul>
+                    <li>
+                        500 Internal Server Error: Erro genérico
+                        no servidor.
+                    </li>
+                    <li>
+                        502 Bad Gateway: O servidor de gateway
+                        recebeu um reposta inválida.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4> HTTP vs HTTPS </h4>
+
+        <p>
+            O HTTP tradicional transmite os dados em texto plano, 
+            o que significa que se alguém interceptar o cabo ou 
+            a rede Wi-Fi no meio do caminho, consegue ler senhas,
+            cartões de crédito e mensagens trocadas.
+        </p>
+
+        <p>
+            Para resolver isso, surgiu o HTTPS(HTTP Secure). Ele
+            adiciona uma camada de criptografia (TLS/SSL -
+            correspondente à camada de Apresentação do modelo OSI)
+            que embaralha os dados de ponta a ponta. Hoje em dia,
+            o uso de HTTPS é obrigatório na web moderna para
+            garantir a privacidade e a integridade das informações.
+        </p>
+        `
+    },
+
+    /************************************************************************** */
+
+
+    "https": {
+        titulo: "Protocolor HTTPS",
+        conteudo: `
+
+        <p>
+            O HTTPS(HyperText Transfer Protocol Secure ou Protocolo de
+            Transferência de Hipertexto Seguro) é a evolução do HTTP.
+            Enquanto o HTTP tradicional transmite todos os dados em
+            texto plano(o que permite que qualquer invasor na mesma
+            rede intercepte senhas, dados de cartão de crédito e 
+            mensagens), o HTTPS adiciona uma camada robusta de 
+            criptografia sobre a conexão.
+        </p>
+
+        <h4> Como o HTTPS funciona? </h4>
+
+        <p>
+            O segredo do HTTPS esta na combinação do protocolo HTTP
+            com protocolos de segurança criptográfica chamados SSL
+            (Secure Sockts Layer) ou, na sua versão moderna e 
+            atualizada, TLS(Transport Layer Security).
+        </p>
+
+        <p>
+            Quando você acessa um site via HTTPS, ocorre um processo
+            chamado Handshake TLS (Aperto de Mão) antes de qualquer
+            dado real ser trocado:
+        </p>
+
+        <ul>
+            <li>
+                Autenticação: O navegador verifica se o certificado
+                digital do site é legítimo e emitido por uma 
+                Autoridade Certificadora(CA) confiável. Isso garante
+                que você está realmente acessando o site oficial(
+                evitando golpes de phishing).
+            </li>
+            <li>
+                Troca de Chaves: O navegador e o servidor negociam
+                chaves criptográficas exclusivas para aquela sessão.
+            </li>
+            <li>
+                Criptografia de Ponta a Ponta: A partir desse momento,
+                todos os dados trocados entre o seu dispositivo e o 
+                servidor são embaralhados de forma que apenas as
+                duas pontas conseguem ler. Se alguém interceptar os
+                pacotes no meio do caminho, verá apenas códigos
+                ilegíveis.
+            </li>
+        </ul>
+
+        <h4> Os Três Pilares da Segurança no HTTPS </h4>
+
+        <p>
+            O HTTPS garante três propriedades vitais para a segu-
+            rança digital:
+        </p>
+
+        <ul>
+            <li>
+                Confidencialidade: Ninguém consegue ler os dados
+                no meio do caminho(proteção contra escutas indese-
+                jadas).
+            </li>
+            <li>
+                Integridade: Garante que os dados enviados naõ 
+                foram modificados ou adulterados durante o 
+                trajeto por terceiros.
+            </li>
+            <li>
+                Autenticidade: Prova que você está conversando
+                com o servidor verdadeiro, e não com um impostor.
+            </li>
+        </ul>
+
+        <h4> Porta Padrão de cada Protocolo </h4>
+
+        <ul>
+            <li>
+                HTTP: PORTA -> 80
+            </li>
+            <li>
+                HTTPS: PORTA -> 443
+            </li>
+        </ul>
+
+
+        <p>
+            Hoje em dia, o HTTPS deixou de ser exclusivo de bancos
+            e e-commerces e se tornou o padrão obrigatório para toda
+            a internet, garantindo a privacidade de qualquer 
+            usuário ao navegar na rede.
+        </p>
+
+        `
+    },
+
+    /************************************************************************************ */
+
+
+    "ftp": {
+        titulo: "Protocolo FTP(arquivos)",
+        conteudo: `
+
+        <p>
+            O HTTPS(HyperText Transfer Protocol Secure ou Protocolo de
+            Transferência de Hipertexto Seguro) é a evolução do HTTP.
+            Enquanto o HTTP tradicional transmite todos os dados em
+            texto plano(o que permite que qualquer invasor na mesma
+            rede intercepte senhas, dados de cartão de crédito e 
+            mensagens), o HTTPS adiciona uma camada robusta de 
+            criptografia sobre a conexão.
+        </p>
+
+        <h4> Como o HTTPS funciona? </h4>
+
+        <p>
+            O segredo do HTTPS esta na combinação do protocolo HTTP
+            com protocolos de segurança criptográfica chamados SSL
+            (Secure Sockts Layer) ou, na sua versão moderna e 
+            atualizada, TLS(Transport Layer Security).
+        </p>
+
+        <p>
+            Quando você acessa um site via HTTPS, ocorre um processo
+            chamado Handshake TLS (Aperto de Mão) antes de qualquer
+            dado real ser trocado:
+        </p>
+
+        <ul>
+            <li>
+                Autenticação: O navegador verifica se o certificado
+                digital do site é legítimo e emitido por uma 
+                Autoridade Certificadora(CA) confiável. Isso garante
+                que você está realmente acessando o site oficial(
+                evitando golpes de phishing).
+            </li>
+            <li>
+                Troca de Chaves: O navegador e o servidor negociam
+                chaves criptográficas exclusivas para aquela sessão.
+            </li>
+            <li>
+                Criptografia de Ponta a Ponta: A partir desse momento,
+                todos os dados trocados entre o seu dispositivo e o 
+                servidor são embaralhados de forma que apenas as
+                duas pontas conseguem ler. Se alguém interceptar os
+                pacotes no meio do caminho, verá apenas códigos
+                ilegíveis.
+            </li>
+        </ul>
+
+        <h4> Os Três Pilares da Segurança no HTTPS </h4>
+
+        <p>
+            O HTTPS garante três propriedades vitais para a segu-
+            rança digital:
+        </p>
+
+        <ul>
+            <li>
+                Confidencialidade: Ninguém consegue ler os dados
+                no meio do caminho(proteção contra escutas indese-
+                jadas).
+            </li>
+            <li>
+                Integridade: Garante que os dados enviados naõ 
+                foram modificados ou adulterados durante o 
+                trajeto por terceiros.
+            </li>
+            <li>
+                Autenticidade: Prova que você está conversando
+                com o servidor verdadeiro, e não com um impostor.
+            </li>
+        </ul>
+
+        <h4> Porta Padrão de cada Protocolo </h4>
+
+        <ul>
+            <li>
+                HTTP: PORTA -> 80
+            </li>
+            <li>
+                HTTPS: PORTA -> 443
+            </li>
+        </ul>
+
+
+        <p>
+            Hoje em dia, o HTTPS deixou de ser exclusivo de bancos
+            e e-commerces e se tornou o padrão obrigatório para toda
+            a internet, garantindo a privacidade de qualquer 
+            usuário ao navegar na rede.
+        </p>
+        
+        `
+    }
 
 }

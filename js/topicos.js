@@ -30,14 +30,14 @@ const topicosRede = {
         conteudo: `
 
         <ul>
-            <li><a href=""><span> HTTP </span></a></li>
-            <li><a href=""><span> HTTPS </span></a></li>
-            <li><a href=""><span> FTP </span></a></li>
-            <li><a href=""><span> SMTP/ </span></a></li>
-            <li><a href=""><span> POP3/</span></a></li>
-            <li><a href=""><span> IMAP </span></a></li>
-            <li><a href=""><span> DNS </span></a></li>
-            <li><a href=""><span> DHCP </span></a></li>
+            <li><a href="conteudo.html?id=http"><span> HTTP </span></a></li>
+            <li><a href="conteudo.html?id=https"><span> HTTPS </span></a></li>
+            <li><a href="conteudo.html?id=ftp"><span> FTP </span></a></li>
+            <li><a href="conteudo.html?id=smtp"><span> SMTP </span></a></li>
+            <li><a href="conteudo.html?id=pop3"><span> POP3 </span></a></li>
+            <li><a href="conteudo.html?id=imap"><span> IMAP </span></a></li>
+            <li><a href="conteudo.html?id=dns"><span> DNS </span></a></li>
+            <li><a href="conteudo.html?id=dhcp"><span> DHCP </span></a></li>
         </ul>
         `
     },
