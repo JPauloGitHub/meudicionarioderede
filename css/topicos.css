@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset básico e variáveis estilo kindle (Papel Pólen / Sépia suave) */
+
+:root {
+  --bg-page: #F8F5EE;
+  --bg-surface: #EFECE4;
+  --text-primary: #2B2B2B;
+  --text-secondary: #5A564E;
+  --border-subtle: #DCD7CB;
+  --header-height: 10vh;
+  --footer-height: 50px;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    padding: 20px;
+    font-family: 'Literata', 'Georgia', serif;
+    line-height: 1.6;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: var(--bg-page);
+    width: 100%;
+    height: var(--header-height);
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-subtle);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+}
+
+header h1 {
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    padding: 2rem;
+    padding-bottom: calc(var(--footer-height) + 2rem);
+}
+
+main section#corpo-topico {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+main section#corpo-topico a {
+    text-decoration: none;
+}
+
+main section#corpo-topico a span {
+    background-color: #fff;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+main section#corpo-topico a span:hover {
+    background-color: brown;
+    color: #eee;
+}
+
+main section#corpo-topico a span.voltar {
+    position: fixed;
+    bottom: 60px;
+    left: 2.5%;
+    background-color: brown;
+    width: 95%;
+    padding: 0.6rem 1.5rem;
+    color: white;
+    z-index: 200;
+}
+
+main section#corpo-topico a span.voltar:hover {
+    color: none;
+    background-color: none;
+}
+
+footer {
+    background-color: var(--bg-surface);
+    width: 100%;
+    height: var(--footer-height);
+    border-radius: 0 0 5px 5px;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+
+/*  Responsividade: 1 coluna em telas menores (Clulares/Tablets verticais) */
+
+@media (max-width: 768px) {
+    main section#corpo-topico {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1.25rem;
+        padding-bottom: calc(var(--footer-height) + 1.5rem);
+    }
+}
