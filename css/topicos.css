@@ -82,6 +82,7 @@ main section#corpo-topico a span {
     display: block;
     text-align: center;
     font-weight: bold;
+    color:cadetblue;
 }
 
 main section#corpo-topico a span:hover {

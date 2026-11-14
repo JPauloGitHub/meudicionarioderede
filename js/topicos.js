@@ -4,24 +4,26 @@ const topicosRede = {
         titulo: "Fundamentos de Rede",
         conteudo: `
 
-        <a href="conteudo.html?id=conceitosbasicos"><span> CONCEITOS BÁSICOS </span></a>
-        <a href="conteudo.html?id=lanwanmanpan"><span> LAN/ WAN/ MAN/ PAN </span></a>
-        <a href="conteudo.html?id=topologiasderede"><span> TOPOLOGIAS DE REDE </span></a>
-        <a href="conteudo.html?id=larguradebandaelatencia"><span> LARGURA DE BANDA E LATÊNCIA </span>
-        <a href="conteudo.html?id=meiosdetransmissao"><span> MEIOS DE TRANSMISSÃO </span></a>
+        <a href="conteudo.html?id=cons-basicos"><span> CONCEITOS BÁSICOS </span></a>
+        <a href="conteudo.html?id=lan-wan"><span> LAN/ WAN/ MAN/ PAN </span></a>
+        <a href="conteudo.html?id=topo-rede"><span> TOPOLOGIAS DE REDE </span></a>
+        <a href="conteudo.html?id=larg-banda"><span> LARGURA DE BANDA E LATÊNCIA </span>
+        <a href="conteudo.html?id=meio-trans"><span> MEIOS DE TRANSMISSÃO </span></a>
+
         <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
         
         `
     },
 
-    "modelosdereferencia": {
+    "model-ref": {
         titulo: "Modelos de Referência",
         conteudo: `
 
-        <ul>
-            <li><a href="conteudo.html?id=modeloosi"><span> MODELO OSI </span></a></li>
-            <li><a href="conteudo.html?id=modelotcpip"><span> MODELO TCP/IP </span></a></li>
-        </ul>
+        <a href="conteudo.html?id=model-osi"><span> MODELO OSI </span></a>
+        <a href="conteudo.html?id=model-tcp"><span> MODELO TCP/IP </span></a>
+
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+
         `
     },
 
@@ -29,81 +31,86 @@ const topicosRede = {
         titulo: "Protocolos",
         conteudo: `
 
-        <ul>
-            <li><a href="conteudo.html?id=http"><span> HTTP </span></a></li>
-            <li><a href="conteudo.html?id=https"><span> HTTPS </span></a></li>
-            <li><a href="conteudo.html?id=ftp"><span> FTP </span></a></li>
-            <li><a href="conteudo.html?id=smtp"><span> SMTP </span></a></li>
-            <li><a href="conteudo.html?id=pop3"><span> POP3 </span></a></li>
-            <li><a href="conteudo.html?id=imap"><span> IMAP </span></a></li>
-            <li><a href="conteudo.html?id=dns"><span> DNS </span></a></li>
-            <li><a href="conteudo.html?id=dhcp"><span> DHCP </span></a></li>
-        </ul>
+            <a href="conteudo.html?id=http"><span> HTTP </span></a>
+            <a href="conteudo.html?id=https"><span> HTTPS </span></a>
+            <a href="conteudo.html?id=ftp"><span> FTP </span></a>
+            <a href="conteudo.html?id=smtp"><span> SMTP </span></a>
+            <a href="conteudo.html?id=pop3"><span> POP3 </span></a>
+            <a href="conteudo.html?id=imap"><span> IMAP </span></a>
+            <a href="conteudo.html?id=dns"><span> DNS </span></a>
+            <a href="conteudo.html?id=dhcp"><span> DHCP </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
         `
     },
 
-    "camadadetransporte": {
+    "camad-transp": {
         titulo: "Camada de Transporte",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> TCP </span></a></li>
-            <li><a href=""><span> UDP </span></a></li>
-        </ul>
+        <a href="conteudo.html?id=tcp"><span> TCP </span></a>
+        <a href="conteudo.html?id=udp"><span> UDP </span></a>
+
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "camadaderede": {
+    "camad-rede": {
         titulo: "Camada de Rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> IPv4 </span></a></li>
-            <li><a href=""><span> IPv6 </span></a></li>
-            <li><a href=""><span> ICMP </span></a></li>
-            <li><a href=""><span> IGMP </span></a></li>
-        </ul>
+            <a href="conteudo.html?id=ipv4"><span> IPv4 </span></a>
+            <a href="conteudo.html?id=ipv6"><span> IPv6 </span></a>
+            <a href="conteudo.html?id=icmp"><span> ICMP </span></a>
+            <a href="conteudo.html?id=igmp"><span> IGMP </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+    
         `
     },
 
-    "camadadeenlace": {
+    "camad-enlace": {
         titulo: "Camada de Enlace",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> ETHERNET </span></a></li>
-            <li><a href=""><span> PPP </span></a></li>
-            <li><a href=""><span> ARP </span></a></li>
-        </ul>
+            <a href="conteudo.html?id=ethernet"><span> ETHERNET </span></a>
+            <a href="conteudo.html?id=ppp"><span> PPP </span></a>
+            <a href="conteudo.html?id=arp"><span> ARP </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "enderecamentoesubrede": {
+    "end-subrede": {
         titulo: "Endereçamento e Sub-rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> ENDEREÇO IP </span></a></li>
-            <li><a href=""><span> MÁSCARA DE REDE </span></a></li>
-            <li><a href=""><span> CIDR </span></a></li>
-            <li><a href=""><span> SUBNETTING </span></a></li>
-            <li><a href=""><span> VLSM </span></a></li>
-        </ul>
+            <a href=""><span> ENDEREÇO IP </span></a>
+            <a href=""><span> MÁSCARA DE REDE </span></a>
+            <a href=""><span> CIDR </span></a>
+            <a href=""><span> SUBNETTING </span></a>
+            <a href=""><span> VLSM </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "equipamentosderede": {
+    "equip-rede": {
         titulo: "Equipamentos de Rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> HUB </span></a></li>
-            <li><a href=""><span> SWITCH </span></a></li>
-            <li><a href=""><span> ROUTER </span></a></li>
-            <li><a href=""><span> ACCESS POINT </span></a></li>
-            <li><a href=""><span> FIREWALL </span></a></li>
-            <li><a href=""><span> MODEM </span></a></li>
-        </ul>
+            <a href=""><span> HUB </span></a>
+            <a href=""><span> SWITCH </span></a>
+            <a href=""><span> ROUTER </span></a>
+            <a href=""><span> ACCESS POINT </span></a>
+            <a href=""><span> FIREWALL </span></a>
+            <a href=""><span> MODEM </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
@@ -111,100 +118,107 @@ const topicosRede = {
         titulo: "Roteamento",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> ROTEAMENTO STÁTICO </span></a></li>
-            <li><a href=""><span> ROTEAMENTO DINÂMICO </span></a></li>
-            <li><a href=""><span> RIP </span></a></li>
-            <li><a href=""><span> OSPF </span></a></li>
-            <li><a href=""><span> EIGRP </span></a></li>
-            <li><a href=""><span> BGP </span></a></li>
-        </ul>
+            <a href=""><span> ROTEAMENTO STÁTICO </span></a>
+            <a href=""><span> ROTEAMENTO DINÂMICO </span></a>
+            <a href=""><span> RIP </span></a>
+            <a href=""><span> OSPF </span></a>
+            <a href=""><span> EIGRP </span></a>
+            <a href=""><span> BGP </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "vlanseswitching": {
+    "vlans-switch": {
         titulo: "VLANs e Switching",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> VLAN </span></a></li>
-            <li><a href=""><span> TRUNK </span></a></li>
-            <li><a href=""><span> STP </span></a></li>
-            <li><a href=""><span> RSTP </span></a></li>
-            <li><a href=""><span> ETHERCHANNEL </span></a></li>
-        </ul>
+            <a href=""><span> VLAN </span></a>
+            <a href=""><span> TRUNK </span></a>
+            <a href=""><span> STP </span></a>
+            <a href=""><span> RSTP </span></a>
+            <a href=""><span> ETHERCHANNEL </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "segurancaderede": {
+    "segur-rede": {
         titulo: "Segurança de Rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> FIREWALL </span></a></li>
-            <li><a href=""><span> ACL </span></a></li>
-            <li><a href=""><span> VPN </span></a></li>
-            <li><a href=""><span> IDS </span></a></li>
-            <li><a href=""><span> IPS </span></a></li>
-            <li><a href=""><span> CRIPTOGRAFIA </span></a></li>
-            <li><a href=""><span> AUTENTICAÇÃO </span></a></li>
-        </ul>
+            <a href=""><span> FIREWALL </span></a>
+            <a href=""><span> ACL </span></a>
+            <a href=""><span> VPN </span></a>
+            <a href=""><span> IDS </span></a>
+            <a href=""><span> IPS </span></a>
+            <a href=""><span> CRIPTOGRAFIA </span></a>
+            <a href=""><span> AUTENTICAÇÃO </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "redessemfio": {
+    "rede-sfio": {
         titulo: "Redes sem Fio",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> WI-FI </span></a></li>
-            <li><a href=""><span> PADRÕES 802.11 </span></a></li>
-            <li><a href=""><span> WPA/WPA2/WPA3 </span></a></li>
-            <li><a href=""><span> PLANEJAMENTO DE COBERTURA </span></a></li>
-        </ul>
+            <a href=""><span> WI-FI </span></a></li>
+            <a href=""><span> PADRÕES 802.11 </span></a>
+            <a href=""><span> WPA/WPA2/WPA3 </span></a>
+            <a href=""><span> PLANEJAMENTO DE COBERTURA </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "monitoramentoediagnostico": {
+    "monitor-diag": {
         titulo: "Monitoramento e Diagnóstico",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> PING </span></a></li>
-            <li><a href=""><span> TRACEROUTE </span></a></li>
-            <li><a href=""><span> NSLOOKUP </span></a></li>
-            <li><a href=""><span> NETSTART </span></a></li>
-            <li><a href=""><span> WIRESHARK </span></a></li>
-            <li><a href=""><span> SNMP </span></a></li>
-        </ul>
+            <a href=""><span> PING </span></a>
+            <a href=""><span> TRACEROUTE </span></a>
+            <a href=""><span> NSLOOKUP </span></a>
+            <a href=""><span> NETSTART </span></a>
+            <a href=""><span> WIRESHARK </span></a>
+            <a href=""><span> SNMP </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     },
 
-    "servicosderede": {
+    "serv-rede": {
         titulo: "Serviços de Rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> DNS </span></a></li>
-            <li><a href=""><span> DHCP </span></a></li>
-            <li><a href=""><span> PROXY </span></a></li>
-            <li><a href=""><span> NTP </span></a></li>
-            <li><a href=""><span> SERVIDORES WEB </span></a></li>
-        </ul>
+            <a href=""><span> DNS </span></a>
+            <a href=""><span> DHCP </span></a>
+            <a href=""><span> PROXY </span></a>
+            <a href=""><span> NTP </span></a>
+            <a href=""><span> SERVIDORES WEB </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+    
         `
     },
 
-    "cloudevirtualizacaoderede": {
+    "cloud-virt-red": {
         titulo: "Cloud e Virtualização de Rede",
         conteudo: `
 
-        <ul>
-            <li><a href=""><span> SDN </span></a></li>
-            <li><a href=""><span> SD-WAN </span></a></li>
-            <li><a href=""><span> VALANs VIRTUAIS </span></a></li>
-            <li><a href=""><span> REDES EM CLOUD </span></a></li>
-            <li><a href=""><span> CONTAINERS E KUBERNETES </span></a></li>
-        </ul>
+            <a href=""><span> SDN </span></a>
+            <a href=""><span> SD-WAN </span></a>
+            <a href=""><span> VALANs VIRTUAIS </span></a>
+            <a href=""><span> REDES EM CLOUD </span></a>
+            <a href=""><span> CONTAINERS E KUBERNETES </span></a>
+
+            <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        
         `
     }
 
