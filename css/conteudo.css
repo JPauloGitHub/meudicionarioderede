@@ -75,7 +75,7 @@ main section#corpo-conteudo h4 {
    border-bottom: 1px brown solid;
    display: block;
    text-align: center;
-   width: 90%;
+   width: 100%;
    padding: 5px 0;
 }
 
@@ -136,6 +136,15 @@ main section#corpo-conteudo ol {
 
 main section#corpo-conteudo ol li {
     margin: 10px 0;
+}
+
+main section#corpo-conteudo table {
+    width: 100%;
+    margin: 10px 0;
+}
+
+main section#corpo-conteudo table td {
+    font-size: 0.5rem;
 }
 
 main section#corpo-conteudo a span.voltar {
