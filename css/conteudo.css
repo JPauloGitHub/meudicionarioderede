@@ -19,7 +19,7 @@
 body {
     background-color: var(--bg-page);
     color: var(--text-primary);
-    padding: 20px;
+    padding: 0;
     font-family: 'Literata', 'Georgia', serif;
     line-height: 1.6;
     min-height: 100vh;
@@ -53,7 +53,7 @@ main {
     width: 100%;
     height: auto;
     min-height: calc(100vh - var(--header-height));
-    padding: 2rem;
+    padding: 0;
     padding-bottom: calc(var(--footer-height) + 2rem);
 }
 
@@ -65,7 +65,18 @@ main section#corpo-conteudo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    padding: 50px 50px 50px 50px;
+    background-color: rgba(0,0,0,0);
+}
+
+main section#corpo-conteudo h4 {
+   font-size: 1.1rem;
+   font-weight: 600;
+   border-bottom: 1px brown solid;
+   display: block;
+   text-align: center;
+   width: 90%;
+   padding: 5px 0;
 }
 
 main section#corpo-conteudo p {
@@ -78,6 +89,7 @@ main section#corpo-conteudo p {
     max-width: 60ch;
     hyphens: auto;
     text-indent: 1.5em;
+    width: 100%;
 }
 
 main section#corpo-conteudo a {
@@ -97,11 +109,33 @@ main section#corpo-conteudo a span {
     text-align: center;
     font-weight: bold;
     color:cadetblue;
+    width: 100%;
+    margin: 10px 0;
 }
 
 main section#corpo-conteudo a span:hover {
     background-color: brown;
     color: #eee;
+}
+
+main section#corpo-conteudo ul {
+    max-width: 60ch;
+    padding: 20px;
+    width: 100%;
+}
+
+main section#corpo-conteudo ul li {
+    margin: 10px 0;
+}
+
+main section#corpo-conteudo ol {
+    max-width: 60ch;
+    padding: 20px;
+    width: 100%;
+}
+
+main section#corpo-conteudo ol li {
+    margin: 10px 0;
 }
 
 main section#corpo-conteudo a span.voltar {
