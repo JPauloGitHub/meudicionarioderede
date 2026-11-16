@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+span.destaque {
+    font-weight: bold;
+    color: brown;
+}
+
 /* Reset básico e variáveis estilo kindle (Papel Pólen / Sépia suave) */
 
 :root {
@@ -141,6 +146,7 @@ main section#corpo-conteudo ol li {
 main section#corpo-conteudo table {
     width: 100%;
     margin: 10px 0;
+    max-width: 60ch;
 }
 
 main section#corpo-conteudo table td {

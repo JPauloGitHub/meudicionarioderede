@@ -7,8 +7,8 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-                Uma rede de computadores é um conjunto de dispositivos, (computadores,
-            servidores, smartphones, impressoras) interconectados para trocar dados,
+                Uma rede de computadores é um conjunto de dispositivos, (<span class="destaque">computadores,
+            servidores, smartphones, impressoras</span>) interconectados para trocar dados,
             compartilhar recursos e se comunicar.
         </p>
 
@@ -19,20 +19,20 @@ const conteudoRede = {
         </p>
         <ul>
             <li>
-                LAN (Local Area Network): Rede local que cobre uma área restrita,
+                <span class="destaque">LAN (Local Area Network):</span> Rede local que cobre uma área restrita,
                 como uma residência, escritório ou escola. Oferece alta velocidade
                 e baixa latência.
             </li>
             <li>
-                WLAN (Wireless LAN): Uma LAN que utiliza tecnologia sem fio(Wi-Fi)
+                <span class="destaque">WLAN (Wireless LAN):</span> Uma LAN que utiliza tecnologia sem fio(Wi-Fi)
                 para conectar os dispositivos.
             </li>
             <li>
-                MAN (Metropolitan Area Network): Rede que abrange uma cidade inteira
+                <span class="destaque">MAN (Metropolitan Area Network):</span> Rede que abrange uma cidade inteira
                 ou um grande campus, conectando várias LANs.
             </li>
             <li>
-                WAN (Wide Area Network): Rede de longa distância que conecta redes
+                <span class="destaque">WAN (Wide Area Network):</span> Rede de longa distância que conecta redes
                 menores através de grandes distâncias geográficas (países ou 
                 continentes). A internet é o maior exemplo de WAN.
             </li>
@@ -47,22 +47,22 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Roteador(Router): Conecta redes diferentes(como uma rede domestica 
+                <span class="destaque">Roteador(Router):</span> Conecta redes diferentes(como uma rede domestica 
                 à internet) e determina a melhor rota(caminho) para os pacotes de 
                 dados viajarem.
             </li>
             <li>
-                Switch: Conecta dispositivos dentro da mesma LAN, encaminhando
+                <span class="destaque">Switch:</span> Conecta dispositivos dentro da mesma LAN, encaminhando
                 o tráfego diretamente para o destinatário correto com base
                 no endereço físico.
             </li>
             <li>
-                Modem: Modula e desmodula o sinal analógico da operadora(fibra, 
+                <span class="destaque">Modem:</span> Modula e desmodula o sinal analógico da operadora(fibra, 
                 cabo ou linha telefônica) em sinal digital compreensível pelos
                 seus dispositivos.
             </li>
             <li>
-                Access Point(Ponto de Acesso): Dispositivo que expande a
+                <span class="destaque">Access Point(Ponto de Acesso):</span> Dispositivo que expande a
                 cobertura de uma rede sem fio, permitindo que mais aparelhos
                 se conectem ao Wi-Fi.
             </li>
@@ -77,14 +77,14 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Endereço MAC(Media Access Control): É o endereço físico gravado
-                na placa de ree do hardware(Ex: 00:1A:2B:3C:4D:5E). Ele é único
+                <span class="destaque">Endereço MAC(Media Access Control):</span> É o endereço físico gravado
+                na placa de ree do <span class="destaque">hardware(Ex: 00:1A:2B:3C:4D:5E)</span>. Ele é único
                 no mundo usado para comunicação na rede local.
             </li>
             <li>
-                Endereço IP(Internet Protocol): É o endereço lógico atribuido
+                <span class="destaque">Endereço IP(Internet Protocol):</span> É o endereço lógico atribuido
                 a um dispositivo quando ele se conecta a uma rede. Pode ser
-                IPv4(Ex: 192.168.1.1) ou IPv6(Ex: 2001:db8::ff00:42:8329).
+                <span class="destaque">IPv4(Ex: 192.168.1.1)</span> ou <span class="destaque">IPv6(Ex: 2001:db8::ff00:42:8329).</span>
                 Ele muda conforme a rede em que você esta e serve para
                 rotear dados entre redes distintas.
             </li>
@@ -95,27 +95,27 @@ const conteudoRede = {
         <p>
                 A comunicação em rede é dividida em camadas para padronizar
             e facilitar o desenvolvimento de protocolos e hardware.
-            O modelo OSI possui 7 camadas, enquanto o modelo prático
-            da Internet (TCP/IP) agrupa essas funções em 4 camadas:
+            O modelo <span class="destaque">OSI</span> possui 7 camadas, enquanto o modelo prático
+            da Internet <span class="destaque">(TCP/IP)</span> agrupa essas funções em 4 camadas:
         </p>
 
         <ol>
             <li>
-                Aplicação: Onde as aplicações interagem com o usuário(ex:
+                <span class="destaque">Aplicação:</span> Onde as aplicações interagem com o usuário(ex:
                 navegadores usando HTTP/HTTPS, clientes de e-mail usando
                 SMTP/IMAP).
             </li>
             <li>
-                Transporte: Garante a entrega confiável dos dados(ex: 
+                <span class="destaque">Transporte:</span> Garante a entrega confiável dos dados(ex: 
                 protocolos TCP para conexões orientadas à sessão e
                 UDP para transmissões rápidas e sem confirmação).
             </li>
             <li>
-                Rede(ou Internet): Responsável pelo roteamento dos pacotes
+                <span class="destaque">Rede(ou Internet):</span> Responsável pelo roteamento dos pacotes
                 entre redes diferentes usando endereços IP.
             </li>
             <li>
-                Enlace de Dados/Física: Cuida da transmissão física dos
+                <span class="destaque">Enlace de Dados/Física:</span> Cuida da transmissão física dos
                 bits pelos meios de transmissão(cabos de rede, fibra óptica 
                 ou ondas de rádio) e do acesso ao meio físico.
             </li>
@@ -143,14 +143,14 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Alcance: Muito curto (geralmente até 10 metros).
+                <span class="destaque">Alcance:</span> Muito curto (geralmente até 10 metros).
             </li>
             <li>
-                Objetivo: Conectar dispositivos pessoais de um único
+                <span class="destaque">Objetivo:</span> Conectar dispositivos pessoais de um único
                 usiário localizados no mesmo espaço físico imediato.
             </li>
             <li>
-                Exemplo de tecnologias: Bluetooth, Zigbee, NFC, USB.
+                Exemplo de tecnologias: <span class="destaque">Bluetooth, Zigbee, NFC, USB</span>.
             </li>
             <li>
                 Casos de uso: Conecar fones de ouvido sem fio ao 
@@ -163,17 +163,17 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Alcance: Curto a médio(de alguns metros até poucos
+                <span class="destaque">Alcance:</span> Curto a médio(de alguns metros até poucos
                 quilômentros).
             </li>
             <li>
-                Objetivo: Interconectar computadores e periféricos dentro
+                <span class="destaque">Objetivo:</span> Interconectar computadores e periféricos dentro
                 de um ambiente limitado e geograficamente restrito com alta
                 taxa de transferência e baixa latência.
             </li>
             <li>
-                Exemplos de tecnologias: Ethernet(cabos RJ45), Wi-Fi(neste 
-                caso, chamada de WLAN).
+                Exemplos de tecnologias: <span class="destaque">Ethernet(cabos RJ45), Wi-Fi(neste 
+                caso, chamada de WLAN)</span>.
             </li>
             <li>
                 Casos de uso: A rede de uma casa, escritório, sala de aula
@@ -185,11 +185,11 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Alcance: Médio a grande (cobrindo a extensão de uma cidade 
+                <span class="destaque">Alcance:</span> Médio a grande (cobrindo a extensão de uma cidade 
                 ou região metropolitana de 10 km a 50 km).
             </li>
             <li>
-                Objetivo: Interconectar diversas LANs distribuidas pou uma
+                <span class="destaque">Objetivo:</span> Interconectar diversas LANs distribuidas pou uma
                 cidade, permitindo comunicação de altíssima velocidade entre
                 sedes de empresas ou orgãos públicos.
             </li>
@@ -209,20 +209,20 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Alcance: Global ou regionalmente ilimitado (interconecta 
-                países, continentes ou o mundo inteiro)
+                <span class="destaque">Alcance:</span> Global ou regionalmente ilimitado (<span class="destaque">interconecta 
+                países, continentes ou o mundo inteiro</span>)
             </li>
             <li>
-                Objetivo: Interligar redes menores (LANs, MANs) situadas
+                <span class="destaque">Objetivo:</span> Interligar redes menores <span class="destaque">(LANs, MANs)</span> situadas
                 em grandes distâncias geográficas.
             </li>
             <li>
                 Exemplo de tecnologias: Cabos submarinos de fibra
                 óptica, comunicação via satélite, links dedicados de 
-                telecomunicões (MPLS, SD-WAN).
+                telecomunicões <span class="destaque">(MPLS, SD-WAN)</span>.
             </li>
             <li>
-                Casos de uso: A própria Internet(que é a maior WAN existente),
+                Casos de uso: A própria Internet(que é a maior <span class="destaque">WAN</span> existente),
                 redes privadas de multinacionais conectando filiais em 
                 diferentes países.
             </li>
@@ -270,32 +270,32 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            A topologia de rede é a estrutura geométrica ou física/lógica como
-            os dispositivos (nós) e os cabos são interconectados em uma rede
+            A topologia de rede é a estrutura <span class="destaque">geométrica ou física/lógica</span> como
+            os dispositivos <span class="destaque">(nós)</span> e os cabos são interconectados em uma rede
             de computadores. Ela define o caminho pelo qual os dados
             trafegam e como a rede se comporta diante de falhas.
         </p>
 
         <p>
-            As topologias dividem-se principalmente entre física(como os
-            cabos e equipamentos estão dispostos) e lógicas(como os dados
-            fluem de fato pela rede). As principais topologias
+            As <span class="destaque">topologias</span> dividem-se principalmente entre <span class="destaque">física(como os
+            cabos e equipamentos estão dispostos)</span> e <span class="destaque">lógicas(como os dados
+            fluem de fato pela rede)</span>. As principais topologias
             estruturais são:
         </p>
 
         <h4> 1. Topologia em Estrela(Star) </h4>
 
-        <p> É a topologia mais utilizada atualmente em redes LAN
+        <p> É a topologia mais utilizada atualmente em redes <span class="destaque">LAN</span>
         residencias e cor´porativas. </p>
 
         <ul>
             <li>
-                Como funciona: Todos os dispositivos(computadores,
-                impressoras, etc.) conectam-se individualmente a um
-                nó central, que geralmente é um Switch ou Roteador.
+                Como funciona: Todos os dispositivos(<span class="destaque">computadores,
+                impressoras, etc.</span>) conectam-se individualmente a um
+                nó central, que geralmente é um <span class="destaque">Switch ou Roteador</span>.
             </li>
             <li>
-                Vantagens: 
+                <span class="destaque">Vantagens:</span> 
                 <ul>
                     <li>
                         Seu um cabo ou dispositivo falhar, apenas
@@ -303,7 +303,7 @@ const conteudoRede = {
                         normalmente.
                     </li>
                     <li>
-                        Fácil de expandir(basta plugar um novo cabo no Switch).
+                        Fácil de expandir(basta plugar um novo cabo no <span class="destaque">Switch</span>).
                     </li>
                     <li>
                         Alto desempenho, pois o tráfego é direcionado direta-
@@ -312,15 +312,15 @@ const conteudoRede = {
                 </ul>
             </li>
             <li>
-                Desvantagens:
+                <span class="destaque">Desvantagens:</span>
                 <ul>
                     <li>
-                        Se o dispositivo(Switch/roteador) falhar, toda a
+                        Se o dispositivo(<span class="destaque">Switch/roteador</span>) falhar, toda a
                         rede cai.
                     </li>
                     <li>
                         Usa mais cabos do que algumas outras topologias
-                        (como o barramento).
+                        (como o <span class="destaque">barramento</span>).
                     </li>
                 </ul>
             </li>
@@ -329,17 +329,17 @@ const conteudoRede = {
         <h4> 2. Topologia em Barramento(Bus) </h4>
 
         <p> Muito comum nos primórdios das redes locais, hoje
-            praticamente obsoleta. </p>
+            praticamente <span class="destaque">obsoleta</span>. </p>
 
         <ul>
             <li>
                 Como funciona: Todos os dispositivos compartilham
                 um único canal de transmissão central(um cabo 
-                chamado backbone ou barramento). Nas pontas do 
+                chamado <span class="destaque">backbone ou barramento</span>). Nas pontas do 
                 cabo existem terminadores para evitar o eco do sinal.
             </li>
             <li>
-                Vantagens:
+                <span class="destaque">Vantagens:</span>
                 <ul>
                     <li>
                         Usa poucos cabos e é muito barata e simples
@@ -348,17 +348,17 @@ const conteudoRede = {
                 </ul>
             </li>
             <li>
-                Desvantagens:
+                <span class="destaque">Desvantagens:</span>
                 <ul>
                     <li>
-                        Se o cabo principal(Backbone) sofrer um corte
+                        Se o cabo principal(<span class="destaque">Backbone</span>) sofrer um corte
                         ou falha em qualquer ponto, toda a rede para.
                     </li>
                     <li>
                         Difícil de isolar falhas e a performance
                         degrada rapidamente à medida que mais
                         computadores são adicionados(ocorre muita
-                        colisão de dados).
+                        <span class="destaque">colisão</span> de dados).
                     </li>
                 </ul>
             </li>
@@ -369,23 +369,23 @@ const conteudoRede = {
         <ul>
             <li>
                 Como funciona: Os dispositivos são conectados em um circuito
-                fechado(um anel). Os dados viajam de um computador para o 
+                fechado(<span class="destaque">um anel</span>). Os dados viajam de um computador para o 
                 próximo em uma única direção(ou bidirecional em versões
                 mais robustas) até atingirem o destinatário. Cada estação
                 funciona como um repetidor.
             </li>
             <li>
-                Vantagens:
+                <span class="destaque">Vantagens:</span>
                 <ul>
                     <li>
                         O fluxo de dados é ordenado, evitando colisões
-                        intensas(muitas vezes utilizando um tokem, 
-                        como nas redes token Ring).
+                        intensas(muitas vezes utilizando um <span class="destaque">tokem, 
+                        como nas redes token Ring</span>).
                     </li>
                 </ul>
             </li>
             <li>
-                Desvantagens:
+                <span class="destaque">Desvantagens:</span>
                 
                 <ul>
                     <li>
@@ -403,7 +403,7 @@ const conteudoRede = {
         <h4> 4. Topologia em Malha(Mesh) </h4>
 
         <p> Usada em ambientes críticos de alta disponibilidade( como
-        datacenters, redes de operadoras e espinha dorsal da internet). </p>
+        <span class="destaque">datacenters, redes de operadoras e espinha dorsal da internet</span>). </p>
 
         <ul>
             <li>
@@ -415,7 +415,7 @@ const conteudoRede = {
 
                 <ul>
                     <li>
-                        Totalmente Ligada: Todo mundo se conecta com todo mundo.
+                        Totalmente <span class="destaque">Ligada</span>: Todo mundo se conecta com todo mundo.
                     </li>
                     <li>
                         Parcialmente Ligada: alguns nós possuem múltiplas
@@ -425,7 +425,7 @@ const conteudoRede = {
                 </ul>
             </li>
             <li>
-                Vantagens:
+                <span class="destaque">Vantagens:</span>
                 <ul>
                     <li>
                         Tolerância a falhas extremas: Se um cabo ou 
@@ -433,20 +433,20 @@ const conteudoRede = {
                         ticamente uma rota alternativa.
                     </li>
                     <li>
-                        Alta segurança e privacidade(dados tráfegam
-                        em canais dedicados).
+                        Alta segurança e privacidade(dados <span class="destaque">tráfegam
+                        em canais dedicados</span>).
                     </li>
                 </ul>
             </li>
             <li>
-                Desvantagens:
+                <span class="destaque">Desvantagens:</span>
                 <ul>
                     <li>
-                        Custo de implementação altíssimo(exige muitos
+                        Custo de implementação <span class="destaque">altíssimo</span>(exige muitos
                         cabos, portas de rede e placas).
                     </li>
                     <li>
-                        Complexa de configuração e manutenção.
+                        <span class="destaque">Complexa de configuração e manutenção</span>.
                     </li>
                 </ul>
             </li>
@@ -464,7 +464,7 @@ const conteudoRede = {
             </li>
 
             <li>
-                Vantagens:
+                <span class="destaque">Vantagens:</span>
                 <ul>
                     <li>
                         Excelente para expansões em grandes
@@ -476,10 +476,10 @@ const conteudoRede = {
                 </ul>
             </li>
             <li>
-                Desvantagens:
+                <span class="destaque">Desvantagens:</span>
                 <ul>
                     <li>
-                        Se o nó principal(raiz) falhar, todos
+                        Se o nó <span class="destaque">principal(raiz)</span> falhar, todos
                         os ramos dependentes perdem a conexão.
                     </li>
                     <li>
@@ -493,11 +493,11 @@ const conteudoRede = {
 
         <p> 
             Na prática, o mundo real raramente usa uma topologia
-            pura. As redes modernas são híbridas, combunando duas
+            <span class="destaque">pura</span>. As redes modernas são <span class="destaque">híbridas</span>, combinando duas
             ou mais topologias diferentes para atender às neces-
             sidades de custo e desempenho(por exemplo, uma rede
-            corporativa que usa topologia em estrela nas salas,
-            mais interliga os prédios em um anel ou malha).
+            corporativa que usa <span class="destaque">topologia em estrela</span> nas salas,
+            mais interliga os prédios em um <span class="destaque">anel ou malha</span>).
         </p>
 
         <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
@@ -513,13 +513,13 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            Dois conceitos fundamentais para medir a velocidade,
+            Dois conceitos fundamentais para medir a <span class="destaque">velocidade</span>,
             a qualidade e o desempenho de qualquer conexão de rede
-            sãop a largura de banda e a latência.
+            são a largura de banda e a <span class="destaque">latência</span>.
         </p>
 
         <p>
-            Embora muitas pessoas usem a palavra "velocidade" como
+            Embora muitas pessoas usem a palavra <span class="destaque">"velocidade"</span> como
             um termo genérico para descrever as duas coisas, elas
             medem aspectos completamente diferentes da transmissão
             de dados.
@@ -528,8 +528,8 @@ const conteudoRede = {
         <h4> 1. Largura de Banda(Bandwidth) </h4>
 
         <p>
-            A largura de banda(muitas vezes tratada comercialmente
-            como taxa de transferência ou throughput) mede a
+            A <span class="destaque">largura de banda</span>(muitas vezes tratada comercialmente
+            como taxa de transferência ou <span class="destaque">throughput</span>) mede a
             quantidde de dados que podem se transmitidos em um
             determinado intervalo de tempo.
         </p>
@@ -538,18 +538,18 @@ const conteudoRede = {
             <li>
                 A metáfora da rodovia: Pense na largura de banda
                 como um número de faixas de uma rodovia. Quanto
-                mais faixas a estrada tiver, mais carros(dados)
+                mais faixas a estrada tiver, mais <span class="destaque">carros(dados)</span>
                 conseguem passar lado a lado ao mesmo tempo.
             </li>
             <li>
-                Unidade de medida: É medida em bps(bits por segundo),
-                comumente em Megabits por segundo(Mbps) ou Gigabits
+                <span class="destaque">Unidade de medida</span>: É medida em <span class="destaque">bps(bits por segundo)</span>,
+                comumente em <span class="destaque">Megabits</span> por segundo(Mbps) ou <span class="destaque">Gigabits</span>
                 por segundo(Gbps).
             </li>
             <li>
-                Na prática: Se você tem uma internet de 300 Mbps,
+                Na prática: Se você tem uma internet de <span class="destaque">300 Mbps</span>,
                 significa que sua conexão tem "espaço" suficiente
-                para baixar até 300 milhões de bits de dados por
+                para baixar até <span class="destaque">300 milhões de bits</span> de dados por
                 segundo.
             </li>
             <li>
@@ -564,34 +564,34 @@ const conteudoRede = {
         <h4> 2. Latência (Latency) </h4>
 
         <p>
-            A latência mede o tempo que um pacote de dados leva para
+            A <span class="destaque">latência</span> mede o tempo que um pacote de dados leva para
             ir de um ponto de origem até o destino e retornar(medida 
-            conhecida como Round Trip Time ou RTT).
+            conhecida como <span class="destaque">Round Trip Time ou RTT</span>).
         </p>
 
         <ul>
             <li>
-                A metáfora da rodovia: Pense na latência como o limite de
+                A metáfora da <span class="destaque">rodovia</span>: Pense na <span class="destaque">latência</span> como o limite de
                 velocidade ou tempo que um carro leva para percorrer
                 a estrada de ponta a ponta. Não adianta a rodovia ter
-                10 faixa(largura de banda alta) se os carros preci-
+                <span class="destaque">10 faixa(largura de banda alta)</span> se os carros preci-
                 sarem adar a 10 km/h.
             </li>
             <li>
-                Unidade de medida: É medida em milissegundos(ms).
-                Quanto menor o valor em ms, mais rápida e respon-
+                Unidade de medida: É medida em <span class="destaque">milissegundos(ms)</span>.
+                Quanto menor o valor em <span class="destaque">ms</span>, mais rápida e respon-
                 siva é a conexão.
             </li>
             <li>
                 Na prática: Quando você clica em um link ou atira em um
                 jogo online, o tempo que passa entre o clique e a ação
-                acontecer na tela é a sua latência(frenquentemente 
-                chamada de ping). Se o ping for de 20 ms, a resposta é
-                quase instantânea; se for de 200 ms, haverá um atraso
-                perceptível(travadinhas ou lag).
+                acontecer na tela é a sua <span class="destaque">latência(frenquentemente 
+                chamada de ping)</span>. Se o ping for de <span class="destaque">20 ms</span>, a resposta é
+                quase instantânea; se for de <span class="destaque">200 ms</span>, haverá um atraso
+                perceptível(<span class="destaque">travadinhas ou lag</span>).
             </li>
             <li>
-                Para que serve:> A baixa latência é crítica para
+                Para que serve: A baixa <span class="destaque">latência</span> é crítica para
                 aplicações em tempo real, como jogos online
                 competitivos, chamadas de vídeo(Zoom/Teams),
                 VoIP e transações financeiras.
@@ -602,12 +602,12 @@ const conteudoRede = {
 
         <p>
             Para uma excelente experiência de rede, você precisa de ambos
-            em equilíbrio. Uma conexão de alta largura de banda com
-            latência altíssim(como a internet via satélite tradicional 
+            em equilíbrio. Uma conexão de <span class="destaque">alta largura de banda</span> com
+            <span class="destaque">latência altíssim</span>(como a internet via satélite tradicional 
             de órbita geoestacionária) permite baixar arquivos grandes,
             mas torna impossível jogar online ou conversar por vídeo
-            sem atrasos incômodos. Já a conexão de baixíssima latência,
-            mas com pouca largura de banda, sofrerá congestionamentos
+            sem atrasos incômodos. Já a conexão de <span class="destaque">baixíssima latência</span>,
+            mas com pouca <span class="destaque">largura de banda</span>, sofrerá congestionamentos
             se muitas pessoas tentarem usá-la ao mesmo tempo.
         </p>
 
@@ -624,51 +624,51 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            Os meios de transmissão são os canais físicos ou atmos-
-            féricos por onde os dados (sinal elétrico, óptico ou 
-            eletromagnético) viajam de um ponto a outro na rede.
-            Eles compõem a Camada Física do modelo OSI.
+            Os meios de <span class="destaque">transmissão</span> são os canais físicos ou atmos-
+            féricos por onde os dados <span class="destaque">(sinal elétrico, óptico ou 
+            eletromagnético)</span> viajam de um ponto a outro na rede.
+            Eles compõem a Camada <span class="destaque">Física</span> do modelo <span class="destaque">OSI</span>.
         </p>
 
         <p>
             Eles são divididos em duas grandes categorias: 
-            guiados(cabeados) e não guiados(sem fio).
+            guiados(<span class="destaque">cabeados</span>) e não guiados(<span class="destaque">sem fio</span>).
         </p>
 
         <h4> 1. Meios Guiados(Cabeados) </h4>
 
         <p>
             Neste modelo, os sinais são confinados a um meio
-            físico concreto, o que garante maior segurança,
+            <span class="destaque">físico concreto</span>, o que garante maior segurança,
             estabilidade e imunidade a interferências externas.
         </p>
 
         <ul>
             <li>
-                Cabo de Par Trançado(Twisted Pair):
+                <span class="destaque">Cabo de Par Trançado(Twisted Pair)</span>:
                 <ul>
                     <li>
-                        Como é: Formado por pares de fios de cobre
-                        entrelaçados(para reduzir interferências 
-                        eletromagnéticas). Os conectores mais 
-                        comuns são os RJ45.
+                        <span class="destaque">Como é:</span> Formado por pares de fios de cobre
+                        <span class="destaque">entrelaçados</span>(para reduzir interferências 
+                        <span class="destaque">eletromagnéticas</span). Os conectores mais 
+                        comuns são os <span class="destaque">RJ45</span>.
                     </li>
                     <li>
-                        Tipos principais: UTP(sem blindagem, o mais 
-                        comum em residências/escritórios) e STP
+                        <span class="destaque">Tipos principais</span>: <span class="destaque">UTP</span>(sem blindagem, o mais 
+                        comum em residências/escritórios) e <span class="destaque">STP</span>
                         (blindado, usado em ambientes industriais 
                         com muita interferência).
                     </li>
                     <li>
-                        Uso: Redes LAN, conexões de computadores a
+                        Uso: <span class="destaque">Redes LAN</span>, conexões de computadores a
                         roteadores e switchers(categoras comuns: 
-                        Cat5e, Cat´6, Cat6a).
+                        <span class="destaque">Cat5e, Cat´6, Cat6a</span>).
                     </li>
                 </ul>
 
             </li>
             <li>
-                Cabo Coaxial:
+                <span class="destaque">Cabo Coaxial:</span>
                 <ul>
                     <li>
                         Como é: Possui um núcleo de cobre central 
@@ -685,25 +685,25 @@ const conteudoRede = {
                 </ul>
             </li>
             <li>
-                Fibra Óptica:
+                <span class="destaque">Fibra Óptica:</span>
                 <ul>
                     <li>
-                        Como é: Transmite os dados através de 
+                        Como é: <span class="destaque">Transmite</span> os dados através de 
                         filamentos finíssimo de vidro ou plástico
                         que conduzem pulsos de luz.
                     </li>
                     <li>
-                        Vantagens: Altíssima velocidade, capacidade
+                        <span class="destaque">Vantagens</span>: Altíssima velocidade, capacidade
                         massiva de tráfego de dados e imunidade
-                        total a interferências eletromagnéticas,
+                        total a interferências <span class="destaque">eletromagnéticas</span>,
                         além de permitir grandes distâncias sem
                         perda de sinal.
                     </li>
                     <li>
-                        Uso: Redes de longa distância(WANs), espinha
+                        Uso: <span class="destaque">Redes de longa distância(WANs)</span>, espinha
                         dorsal da internet(cabos submarinos) e 
                         conexões residenciais de alta velocidade
-                        (FTTH - Fiber to the Home).
+                        (<span class="destaque">FTTH</span> - Fiber to the Home).
                     </li>
                 </ul>
             </li>
@@ -720,34 +720,34 @@ const conteudoRede = {
 
         <ul>
             <li>
-                Rádio Frequência(Wi-Fi e Redes Celulares):
+                <span class="destaque">Rádio Frequência(Wi-Fi e Redes Celulares)</span>:
                 <ul>
                     <li>
                         Usa ondas de rádio para conectar dis-
                         positivos em redes locais(como rotea-
-                        dores sem fio) ou redes móveis(4G, 5G).
+                        dores sem <span class="destaque">fio</span>) ou redes móveis(<span class="destaque">4G, 5G</span>).
                     </li>
                 </ul>
             </li>
             <li>
-                Micro-ondas (Terrestres e Espaciais):
+                <span class="destaque">Micro-ondas</span> (Terrestres e Espaciais):
                 <ul>
                     <li>
-                        Terrestres: Torres de transmissão que enviam
+                        <span class="destaque">Terrestres</span>: Torres de transmissão que enviam
                         sinais de linha de visada direta entre 
                         pontos distantes(muito usado por operadoras 
-                        de telecomunicações).
+                        de <span class="destaque">telecomunicações</span>).
                     </li>
                     <li>
-                        Satélites: Comunicação espacial onde os dados
+                        <span class="destaque">Satélites</span>: Comunicação espacial onde os dados
                         viajam da terra para um satélite em órbita 
                         e rabatem para outro ponto do globo(ex: internt 
-                        via satélite como Starlink).
+                        via satélite como <span class="destaque">Starlink</span>).
                     </li>
                 </ul>
             </li>
             <li>
-                Infravermelho:
+                <span class="destaque">Infravermelho:</span>
                 <ul>
                     <li>
                         Usa luz de alta frequência invisível ao olho
@@ -772,14 +772,14 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            Modelo OSI(Open Systems Interconnection ou Interconexão 
-            de Sistemas Abertos) é um modelo conceitul criado pela
-            ISO(Organização Internacional para Padronização) em
+            Modelo <span class="destaque">OSI(Open Systems Interconnection ou Interconexão 
+            de Sistemas Abertos)</span> é um modelo conceitul criado pela
+            <span class="destaque">ISO</span>(Organização Internacional para Padronização) em
             1984.
         </p>
 
         <p>
-            O objetivo principal do modelo OSI é padronizar a
+            O objetivo principal do modelo <span class="destaque">OSI</span> é padronizar a
             comunicação entre diferentes sistemas de computadores,
             dividindo o processo complexo de transmissão de dados
             em 7 camadas distintas e modulares.
@@ -790,7 +790,7 @@ const conteudoRede = {
             protocolo de uma camada especifica precisar ser alterado,
             ele não afeta as outras camadas, facilitando o desen-
             volvimento de hardwares, softwares e a solução de pro-
-            blemas(troubleshooting).
+            blemas(<span class="destaque">troubleshooting</span>).
         </p>
 
         <h4> As 7 camadas do Modelo OSI(da Aplicação à Física) </h4>
@@ -809,13 +809,13 @@ const conteudoRede = {
                 que os aplicativos utilizam para interagir com a rede.
             </li>
             <li>
-                Exemplos de Protocolos: HTTP/HTTPS(navegadores web), 
-                SMTP/IMAP(e-mails), FTP(transferência de arquivos),
-                DNS(resolução de nomes).
+                Exemplos de Protocolos: <span class="destaque">HTTP/HTTPS</span>(navegadores web), 
+                <span class="destaque">SMTP/IMAP</span>(e-mails), <span class="destaque">FTP</span>(transferência de arquivos),
+                <span class="destaque">DNS</span>(resolução de nomes).
             </li>
             <li>
-                Em resumo: Onde o usuário interage com o software
-                de rede.
+                Em resumo: Onde o usuário interage com o <span class="destaque">software
+                de rede</span>.
             </li>
         </ul>
 
@@ -827,7 +827,7 @@ const conteudoRede = {
                 que os dados enviados por uma aplicação de um sisteme
                 possam ser compreendidos pela aplicação de outro
                 sistema. Também cuida da formatação, criptografia
-                (como SSL/TLS) e compreessão de dados.
+                (como <span class="destaque">SSL/TLS</span>) e compreessão de dados.
             </li>
             <li>
                 Em resumo: Formata, criptografa e traduz os dados.
@@ -855,20 +855,20 @@ const conteudoRede = {
             <li>
                 O que faz: Garante a entrega confiável e ordenada dos
                 dados de ponta a ponta entre a origem e o destino.
-                Ela divide os dados em blocos menores(segmentos),
+                Ela divide os dados em blocos menores(<span class="destaque">segmentos</span>),
                 verifica erros e controla o fluxo de dados.
             </li>
             <li>
                 Exemplos de Protocolos:
                 <ul>
                     <li>
-                        TCP(Transmission Control Protocol): Confiável,
+                        <span class="destaque">TCP</span>(Transmission Control Protocol): Confiável,
                         orientada à conexão, garante que nenhum 
                         pacote se perca(usado em paginas web, e-mails,
                         aquivos).
                     </li>
                     <li>
-                        UDP(User Datagram Protocol): Rápido, não 
+                        <span class="destaque">UDP</span>(User Datagram Protocol): Rápido, não 
                         orientado à conexão, sem garantia de entrega 
                         (usado em streaming de video, chamadas de voz 
                         e jogos online).
@@ -880,7 +880,7 @@ const conteudoRede = {
             </li>
         </ul>
 
-        <h4> 3. Camada de Rede(Network) </h4>
+        <h4> 3. Camada de <span class="destaque">Rede(Network)</span> </h4>
 
         <ul>
             <li>
@@ -890,11 +890,11 @@ const conteudoRede = {
                 destino através de múltiplos saltos.
             </li>
             <li>
-                Endereçamento principal: Utiliza Endereços IP.
+                Endereçamento principal: Utiliza Endereços <span class="destaque">IP</span>.
             </li>
             <li>
-                Exemplos de Protocolos/Dispositivos: IP(IPv4 e 
-                IPv6), ICMP, Roteadores.
+                Exemplos de Protocolos/Dispositivos: <span class="destaque">IP(IPv4 e 
+                IPv6), ICMP, Roteadores</span>.
             </li>
             <li>
                 Em resumo: Roteia os pacotes entre redes diferentes.
@@ -907,20 +907,20 @@ const conteudoRede = {
             <li>
                 O que faz: Cuida da transmissão confiável de dados
                 entre dois nós diretamente conectados na mesma
-                rede local(LAN). Ela empacota os dados em quadros
-                (frames) e controla o acesso ao meio físico, além
+                rede <span class="destaque">local(LAN)</span>. Ela empacota os dados em quadros
+                (<span class="destaque">frames</span>) e controla o acesso ao meio físico, além
                 de detectar erros locais.
             </li>
             <li>
-                Endereçamento principal: Utiliza Endereços MAC(
-                físicos).
+                Endereçamento principal: Utiliza Endereços <span class="destaque">MAC(
+                físicos)</span>.
             </li>
             <li>
-                Exemplos de Dispositivos: Switches e placas de rede.
+                Exemplos de Dispositivos: <span class="destaque">Switches e placas de rede</span>.
             </li>
             <li>
                 Em resumo: Conecta dispositivos na mesma rede
-                física usando endereços MAC.
+                física usando endereços <span class="destaque">MAC</span>.
             </li>
         </ul>
 
@@ -930,14 +930,14 @@ const conteudoRede = {
         <ul>
             <li>
                 O que faz: É a camada base. Cuida da transmissão
-                real dos bits(0s e 1s) através do meio físico
+                real dos <span class="destaque">bits(0s e 1s)</span> através do meio físico
                 de transmissão(cabos de cobre, fibras ópticas ou
                 ondas de rádio). Ela define voltagens, pinagem de
                 conectores, frequências e propriedades elétricas/
                 ópticas.
             </li>
             <li>
-                Exemplos de Elementos: Cabos RJ45, fibra óptica,
+                Exemplos de Elementos: Cabos <span class="destaque">RJ45</span>, fibra óptica,
                 hubs, conectores.
             </li>
             <li>
@@ -950,10 +950,10 @@ const conteudoRede = {
 
         <p>
             Vale notar que, na prática moderna da internet, 
-            utilizamos mais o Modelo TCP/IP(que consolida essas
-            7 camadas do OSI em apneas 4 camadas mais práticas:
+            utilizamos mais o Modelo <span class="destaque">TCP/IP</span>(que consolida essas
+            7 camadas do <span class="destaque">OSI</span> em apneas 4 camadas mais práticas:
             Aplicação, Transporte, Internet, e Acesso à Rede).
-            No entanto, o modelo OSI continua sendo a referên-
+            No entanto, o modelo <span class="destaque">OSI</span> continua sendo a referên-
             cia teórica fundamental para explicar e estudar
             como funcionam as redes de computadores.
         </p>
@@ -970,16 +970,16 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            O Modelo TCP/IP(também conhecido como Conjunto de
+            O Modelo <span class="destaque">TCP/IP</span>(também conhecido como Conjunto de
             Protocolos da Internet) é a arquitetura prática
             que sustenta toda a internet e a grande maioria
             das redes de computadores modernas.
         </p>
 
         <p>
-            Enquanto o Modelo OSI, é um modelo conceitual e 
-            teórico de 7 camadas, o TCP/IP foi desenvolvido
-            pelo Departamento de Defesa dos EUA(DARPA) na
+            Enquanto o Modelo <span class="destaque">OSI</span>, é um modelo conceitual e 
+            teórico de 7 camadas, o <span class="destaque">TCP/IP</span> foi desenvolvido
+            pelo Departamento de Defesa dos <span class="destaque">EUA(DARPA)</span> na
             década de 1970 para ser um modelo funcional,
             direto e otimizado para a comunicação real.
         </p>
@@ -1024,7 +1024,7 @@ const conteudoRede = {
         <h4> As 4 Camadas do Modelo TCP/IP </h4>
 
         <p>
-            O modelo TCP/IP agrupa as funções da rede apenas
+            O modelo <span class="destaque">TCP/IP</span> agrupa as funções da rede apenas
             4 camadas(embora algumas versões da leteratura
             técnica dividam a camada de acesso à rede em duas,
             formando 5):
@@ -1035,13 +1035,13 @@ const conteudoRede = {
         <ul>
             <li>
                 O que faz: Equivalente às camadas de Aplicação,
-                Apresentação e Sessão do Modelo OSI juntas.
+                Apresentação e Sessão do Modelo <span class="destaque">OSI</span> juntas.
                 É onde os aplicativos geram e consomem os dados.
             </li>
             <li>
-                Exemplos de Protocolos: HTTP/HTTPS(Web), FTP(arquivos),
+                Exemplos de Protocolos: <span class="destaque">HTTP/HTTPS(Web), FTP(arquivos),
                 SMTP/POP3/IMAP(e-mails), DNS(nomes de domínio), SSH e
-                Telnet(acesso remoto).
+                Telnet(acesso remoto)</span>.
             </li>
         </ul>
 
@@ -1054,16 +1054,16 @@ const conteudoRede = {
                 dados e controlando o fluxo.
             </li>
             <li>
-                Principais Protocolos:
+                <span class="destaque">Principais Protocolos:</span>
                 <ul>
                     <li>
-                        TCP(Trasmition Control Protocol): Orientado 
+                        <span class="destaque">TCP(Trasmition Control Protocol)</span>: Orientado 
                         à conexão, confiável, verifica erros, retrans-
                         mite pacotes perdidos e entrega os dados na
                         ordem certa.
                     </li>
                     <li>
-                        UDP(User Datagram Protocol): Não orientado à
+                        <span class="destaque">UDP(User Datagram Protocol)</span>: Não orientado à
                         conexão, focado em velocidade, sem garatia
                         de entrega(ideal para streamng, jogos e ViIP).
                     </li>
@@ -1080,10 +1080,10 @@ const conteudoRede = {
                 (inter-rede). É o coração da conectividade da internt.
             </li>
             <li>
-                Principais Protocolos: IP(IPv4 e IPv6), ICMP(usado
+                Principais Protocolos: <span class="destaque">IP(IPv4 e IPv6), ICMP(usado
                 pelo comoando ping para diagnósticos), ARP(associa
                 IP ao endereço MAC) e protocolos de roteamento(como
-                OSPF e BGP).
+                OSPF e BGP)</span>.
             </li>
         </ul>
 
@@ -1091,22 +1091,22 @@ const conteudoRede = {
 
         <ul>
             <li>
-                O que faz: Combina as camadas de Enlace e Física
-                do Modelo OSI. Cuida de como os dados são colocados
+                O que faz: Combina as camadas de <span class="destaque">Enlace e Física</span>
+                do Modelo <span class="destaque">OSI</span>. Cuida de como os dados são colocados
                 fisicamente no meio de transmissão(cabo de rede
                 fibra, Wi-Fi) e da comunicação direta entre dis-
-                positivos na mesma rede local usando endereços MAC.
+                positivos na mesma rede local usando endereços <span class="destaque">MAC</span>.
             </li>
             <li>
-                Exemplos de Tecnologias: Ethernet, Wi-Fi(802.11). PPP.
+                Exemplos de Tecnologias: <span class="destaque">Ethernet, Wi-Fi(802.11). PPP</span>.
             </li>
         </ul>
 
         <h4> Por que TCP/IP venceu na prática? </h4>
 
         <p>
-            Enquanto o modelo OSI seviu como uma excelente base
-            de padronização, o TCP/IP se tornou o padrão global
+            Enquanto o modelo <span class="destaque">OSI</span> seviu como uma excelente base
+            de padronização, o <span class="destaque">TCP/IP</span> se tornou o padrão global
             absoluto da internet por ser pragmático, flexível e
             eficiente. Ele não se prende a regras rígidas de
             separação de software e hardware, permitindo que
@@ -1127,13 +1127,13 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            O HTTP(HyperText Transfer Protocol ou Protocolo
+            O <span class="destaque">HTTP</span>(HyperText Transfer Protocol ou Protocolo
             de Transferência de Hipertexto) é o protocolo da 
             Camada de Aplicação que serve de base para toda
             a comunicação de dados da Word Wide Web.
             Sempre que você digita um site no navegador
-            ou clica em um link, é o HTTP(ou versão segura,
-            HTTPS) que permite que o seu navegador (cliente)
+            ou clica em um link, é o <span class="destaque">HTTP</span>(ou versão segura,
+            <span class="destaque">HTTPS</span>) que permite que o seu navegador (cliente)
             converse com o servidor web onde o site está
             hospedado.
         </p>
@@ -1142,47 +1142,47 @@ const conteudoRede = {
         Request-Response) </h4>
 
         <p>
-            O funcionamento do HTTP é baseado estritamento no 
+            O funcionamento do <span class="destaque">HTTP</span> é baseado estritamento no 
             modelo Cliente-Servidor através de um ciclo de 
             solicitação e entrega:
         </p>
 
         <ul>
             <li>
-                A Requisição(Request): O seu navegador (cliente)
+                A <span class="destaque">Requisição(Request)</span>: O seu navegador (cliente)
                 envia uma mensagem para o servidor pedindo
                 um recurso(ex: carregar a página inicial, enviar
                 um formulário de login, buscar um imagem).
             </li>
             <li>
-                A Resposta(Response): O servidor processa o pedido
-                e devolve o resultado (ex: o código HTML/CSS da
-                página, um arquivo JSON ou uma mensagem de erro).
+                A <span class="destaque">Resposta(Response)</span>: O servidor processa o pedido
+                e devolve o resultado (ex: o código <span class="destaque">HTML/CSS</span> da
+                página, um arquivo <span class="destaque">JSON</span> ou uma mensagem de erro).
             </li>
         </ul>
 
         <h4> Estrutura de uma Requisição HTTP </h4>
 
         <p>
-            Uma requisição HTTP é composta basicamente por:
+            Uma requisição <span class="destaque">HTTP</span> é composta basicamente por:
         </p>
 
         <ul>
             <li>
-                Método(Verbo HTTP): O que você quer fazer com
+                <span class="destaque">Método(Verbo HTTP)</span>: O que você quer fazer com
                 o recurso.
             </li>
             <li>
-                URL(Caminmho): O endereço do recurso no sevidor
+                <span class="destaque">URL</span>(Caminmho): O endereço do recurso no sevidor
                 (ex: /produtos).
             </li>
             <li>
-                Cabeçaclho(Headers): Metadados informando 
+                <span class="destaque">Cabeçaclho(Headers)</span>: Metadados informando 
                 detalhes como o navegador que está acessando,
                 idioma aceito ou tokens de autenticação.
             </li>
             <li>
-                Corpo(Body-opcional): Dados enviados ao servidor
+                <span class="destaque">Corpo(Body-opcional)</span>: Dados enviados ao servidor
                 (usado ao preencher um cadastro, por exemplo).
             </li>
         </ul>
@@ -1191,21 +1191,21 @@ const conteudoRede = {
 
         <ul>
             <li>
-                GET: Pede para o servidor trazer(ler) um
+                <span class="destaque">GET</span>: Pede para o servidor trazer(ler) um
                 recurso.(ex: Abrir uma página Web).
             </li>
             <li>
-                POST: Envia dados novos para o servidor criar
+                <span class="destaque">POST</span>: Envia dados novos para o servidor criar
                 algo.(ex: Cadastrar um usuário ou enviar um
                 comentário).
             </li>
             <li>
-                PUT/PATCH: Atualiza um recurso existente no 
-                servidor (PUT substitui o recurso todo; PATCH
+                <span class="destaque">PUT/PATCH</span>: Atualiza um recurso existente no 
+                servidor (<span class="destaque">PUT</span> substitui o recurso todo; <span class="destaque">PATCH</span>
                 altera apenas alguns campos).
             </li>
             <li>
-                DELETE: Remove um recurso do servidor.
+                <span class="destaque">DELETE</span>: Remove um recurso do servidor.
             </li>
         </ul>
 
@@ -1220,65 +1220,65 @@ const conteudoRede = {
 
         <ul>
             <li>
-                1xx(Informativo): A requisição foi recebida
+                <span class="destaque">1xx(Informativo)</span>: A requisição foi recebida
                 e o processo continua.
             </li>
             <li>
-                2xx(Sucesso): Tudo ocorreu bem.
+                <span class="destaque">2xx(Sucesso)</span>: Tudo ocorreu bem.
                 <ul>
                     <li>
-                        200 OK: Sucesso padrão.
+                        <span class="destaque">200 OK</span>: Sucesso padrão.
                     </li>
                     <li>
-                        201 Created: Recurso criado com sucesso
-                        (comum em cadastros via POST).
+                        <span class="destaque">201 Created</span>: Recurso criado com sucesso
+                        (comum em cadastros via <span class="destaque">POST</span>).
                     </li>
                 </ul>
             </li>
             <li>
-                3xx(Redirecionamento): O cliente precisa executar
+                <span class="destaque">3xx(Redirecionamento)</span>: O cliente precisa executar
                 ações adicionais para concluir a requisição.
                 
                 <ul>
                     <li>
-                        301 Moved Permanently: O endereço mudou
-                        permanentemente para outra URL.
+                        <span class="destaque">301 Moved Permanently</span>: O endereço mudou
+                        permanentemente para outra <span class="destaque">URL</span>.
                     </li>
                 </ul>
             </li>
             <li>
-                4xx(Erro do Cliente): O pedido tem algum erro que 
+                <span class="destaque">4xx(Erro do Cliente)</span>: O pedido tem algum erro que 
                 partiu de quem enviou(você).
 
                 <ul>
                     <li>
-                        400 Bad Request: Requisição mal furmatada.
+                        <span class="destaque">400 Bad Request</span>: Requisição mal furmatada.
                     </li>
                     <li>
-                        401 Unauthorized: Falta autenticação( você
+                        <span class="destaque">401 Unauthorized</span>: Falta autenticação( você
                         precisa fazer login).
                     </li>
                     <li>
-                        403 Forbidden: Você está logado, mas não tem
+                        <span class="destaque">403 Forbidden</span>: Você está logado, mas não tem
                         permissão para acessar aquilo
                     </li>
                     <li>
-                        404 Not Found: O recurso ou página solicitada
+                        <span class="destaque">404 Not Found</span>: O recurso ou página solicitada
                         não existe no servidor.
                     </li>
                 </ul>
             </li>
             <li>
-                5xx(Erro do Servidor): O cliente enviou tudo center,
+                <span class="destaque">5xx(Erro do Servidor)</span>: O cliente enviou tudo center,
                 mas o servidor falhou ao processar.
 
                 <ul>
                     <li>
-                        500 Internal Server Error: Erro genérico
+                        <span class="destaque">500 Internal Server Error</span>: Erro genérico
                         no servidor.
                     </li>
                     <li>
-                        502 Bad Gateway: O servidor de gateway
+                        <span class="destaque">502 Bad Gateway</span>: O servidor de gateway
                         recebeu um reposta inválida.
                     </li>
                 </ul>
@@ -1288,18 +1288,18 @@ const conteudoRede = {
         <h4> HTTP vs HTTPS </h4>
 
         <p>
-            O HTTP tradicional transmite os dados em texto plano, 
+            O <span class="destaque">HTTP</span> tradicional transmite os dados em texto plano, 
             o que significa que se alguém interceptar o cabo ou 
-            a rede Wi-Fi no meio do caminho, consegue ler senhas,
+            a rede <span class="destaque">Wi-Fi</span> no meio do caminho, consegue ler senhas,
             cartões de crédito e mensagens trocadas.
         </p>
 
         <p>
-            Para resolver isso, surgiu o HTTPS(HTTP Secure). Ele
-            adiciona uma camada de criptografia (TLS/SSL -
-            correspondente à camada de Apresentação do modelo OSI)
+            Para resolver isso, surgiu o <span class="destaque">HTTPS(HTTP Secure)</span>. Ele
+            adiciona uma camada de criptografia (<span class="destaque">TLS/SSL</span> -
+            correspondente à camada de Apresentação do modelo <span class="destaque">OSI</span>)
             que embaralha os dados de ponta a ponta. Hoje em dia,
-            o uso de HTTPS é obrigatório na web moderna para
+            o uso de <span class="destaque">HTTPS</span> é obrigatório na web moderna para
             garantir a privacidade e a integridade das informações.
         </p>
 
@@ -1315,27 +1315,27 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            O HTTPS(HyperText Transfer Protocol Secure ou Protocolo de
-            Transferência de Hipertexto Seguro) é a evolução do HTTP.
-            Enquanto o HTTP tradicional transmite todos os dados em
+            O <span class="destaque">HTTPS</span>(HyperText Transfer Protocol Secure ou Protocolo de
+            Transferência de Hipertexto Seguro) é a evolução do <span class="destaque">HTTP</span>.
+            Enquanto o <span class="destaque">HTTP</span> tradicional transmite todos os dados em
             texto plano(o que permite que qualquer invasor na mesma
             rede intercepte senhas, dados de cartão de crédito e 
-            mensagens), o HTTPS adiciona uma camada robusta de 
+            mensagens), o <span class="destaque">HTTPS</span> adiciona uma camada robusta de 
             criptografia sobre a conexão.
         </p>
 
         <h4> Como o HTTPS funciona? </h4>
 
         <p>
-            O segredo do HTTPS esta na combinação do protocolo HTTP
-            com protocolos de segurança criptográfica chamados SSL
-            (Secure Sockts Layer) ou, na sua versão moderna e 
-            atualizada, TLS(Transport Layer Security).
+            O segredo do <span class="destaque">HTTPS</span> esta na combinação do protocolo <span class="destaque">HTTP</span>
+            com protocolos de segurança criptográfica chamados <span class="destaque">SSL</span>
+            <span class="destaque">(Secure Sockts Layer)</span> ou, na sua versão moderna e 
+            atualizada, <span class="destaque">TLS(Transport Layer Security)</span>.
         </p>
 
         <p>
-            Quando você acessa um site via HTTPS, ocorre um processo
-            chamado Handshake TLS (Aperto de Mão) antes de qualquer
+            Quando você acessa um site via <span class="destaque">HTTPS</span>, ocorre um processo
+            chamado Handshake <span class="destaque">TLS</span> (Aperto de Mão) antes de qualquer
             dado real ser trocado:
         </p>
 
@@ -1345,7 +1345,7 @@ const conteudoRede = {
                 digital do site é legítimo e emitido por uma 
                 Autoridade Certificadora(CA) confiável. Isso garante
                 que você está realmente acessando o site oficial(
-                evitando golpes de phishing).
+                evitando golpes de <span class="destaque">phishing</span>).
             </li>
             <li>
                 Troca de Chaves: O navegador e o servidor negociam
@@ -1364,7 +1364,7 @@ const conteudoRede = {
         <h4> Os Três Pilares da Segurança no HTTPS </h4>
 
         <p>
-            O HTTPS garante três propriedades vitais para a segu-
+            O <span class="destaque">HTTPS</span> garante três propriedades vitais para a segu-
             rança digital:
         </p>
 
@@ -1389,16 +1389,16 @@ const conteudoRede = {
 
         <ul>
             <li>
-                HTTP: PORTA -> 80
+                <span class="destaque">HTTP: PORTA -> 80</span>
             </li>
             <li>
-                HTTPS: PORTA -> 443
+                <span class="destaque">HTTPS: PORTA -> 443</span>
             </li>
         </ul>
 
 
         <p>
-            Hoje em dia, o HTTPS deixou de ser exclusivo de bancos
+            Hoje em dia, o <span class="destaque">HTTPS</span> deixou de ser exclusivo de bancos
             e e-commerces e se tornou o padrão obrigatório para toda
             a internet, garantindo a privacidade de qualquer 
             usuário ao navegar na rede.
@@ -1417,15 +1417,15 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            O FTP(File Transfer Protocol ou Protocolo de Transferência de Arquivos)
-            é um protocolo clássico da Camada de Aplicação do modelo TCP/IP, 
+            O <span class="destaque">FTP(File Transfer Protocol ou Protocolo de Transferência de Arquivos)</span>
+            é um protocolo clássico da Camada de Aplicação do modelo <span class="destaque">TCP/IP</span>, 
             desenvolvido especificamente para tranferir arquivos entre um 
             computador cliente e um servidor através de uma rede(como a internet).
         </p>
 
         <p>
-            Enquanto o HTTP foi feito para carregar páginas web estruturada
-            em hipertexto, o FTP nasceu para mover arquivos brutos - sejam
+            Enquanto o <span class="destaque">HTTP</span> foi feito para carregar páginas web estruturada
+            em hipertexto, o <span class="destaque">FTP</span> nasceu para mover arquivos brutos - sejam
             imagens, documentos, instaladores ou códigos de sites inteiros -
             de um lugar para o outro.
         </p>
@@ -1433,26 +1433,26 @@ const conteudoRede = {
         <h4> Como o FTP Funciona? </h4>
 
         <p>
-            O FTP opera no modelo Cliente-Servidor, mas com uma característica
+            O <span class="destaque">FTP</span> opera no modelo Cliente-Servidor, mas com uma característica
             muito interessante: ele utiliza duas conexões separada(canais)
             simultaneamente para funcionar:
         </p>
 
         <ul>
             <li>
-                Canal de Controle(Porta 21): É por onde viajam os comandos
+                Canal de Controle(Porta <span class="destaque">21</span>): É por onde viajam os comandos
                 que você envia ao servidor(como "listar arquivos", "excluir",
                 "mudar de deretório") e as respostas do servidor.
             </li>
             <li>
-                Canal de Dados(Porta 20 ou porta dinâmica): É aberto exclu-
+                Canal de Dados(Porta <span class="destaque">20</span> ou porta dinâmica): É aberto exclu-
                 sivamente para a transferência real do arquivo(quando o upload
                 ou download de fato acontece).
             </li>
 
         <p>
-           Para usar o FTP, você normalmente utiliza um software chamado
-           cliente FTP(como o FileZilla, Cyberduck ou comandos via terminal),
+           Para usar o <span class="destaque">FTP</span>, você normalmente utiliza um software chamado
+           cliente <span class="destaque">FTP</span>(como o FileZilla, Cyberduck ou comandos via terminal),
            que se conecta ao servidor informando um endereço(ex: 
            ftp.meusite.com), um nome de usuário e uma senha.
         </p>
@@ -1460,18 +1460,18 @@ const conteudoRede = {
         <h4> Modos de Operação do FTP </h4>
 
         <p>
-            O FTP possui duas formas de lidar com a abertura do canal de dados
-            o que historicamente costumava gerar dores de cabeça com firewalls:
+            O <span class="destaque">FTP</span> possui duas formas de lidar com a abertura do canal de dados
+            o que historicamente costumava gerar dores de cabeça com <span class="destaque">firewalls</span>:
         </p>
 
         <ul>
             <li>
-                Modo Ativo(Active Mode): O servidor inicia a conexão de dados
-                voltando para o cliente. Se o cliente tiver um firewall
+                <span class="destaque">Modo Ativo</span>(Active Mode): O servidor inicia a conexão de dados
+                voltando para o cliente. Se o cliente tiver um <span class="destaque">firewall</span>
                 rigoroso bloqueando conexões externas, a transferência falha.
             </li>
             <li>
-                Modo Passivo(Passive Mode): O cliente solicita ao servidor
+                <span class="destaque">Modo Passivo</span>(Passive Mode): O cliente solicita ao servidor
                 que abra uma porta de dados específica e se conecta a ela.
                 É o modo mais utilizado hoje em dia porque evita proble-
                 mas com firewalls de roteadores domésticos e corporativos.
@@ -1481,34 +1481,34 @@ const conteudoRede = {
         <h4> O Problema Histórico de Segurança: FTP vs FTPS/SFTP </h4>
 
         <p>
-            Assim como o HTTP antigo, o FTP tradicional foi criado em 
+            Assim como o <span class="destaque">HTTP</span> antigo, o <span class="destaque">FTP</span> tradicional foi criado em 
             uma época em que a segurança da rede não era a principal
             preocupação.
         </p>
 
         <ul>
             <li>
-                FTP padrão: Transmite absolutamente tudo em texto plano-
+                <span class="destaque">FTP</span> padrão: Transmite absolutamente tudo em texto plano-
                 incluindo o seu nome de usuário e senha de login. Se
                 alguém interceptar a rede no meio do caminho, conse-
                 gue roubar suas credenciais instantaneamente.
             </li>
 
             <p>
-                Por causa disso, o FTP puro foi sendo substituido
+                Por causa disso, o <span class="destaque">FTP</span> puro foi sendo substituido
                 por alternativas seguras:
             </p>
 
             <li>
-                FTPS(FTP Secure ou FTP-SSL): Adiciona criptografia SSL/TLS
-                sobre a conexão FTP tradicional, protegendo os dados e as
+                <span class="destaque">FTPS(FTP Secure ou FTP-SSL)</span>: Adiciona criptografia <span class="destaque">SSL/TLS</span>
+                sobre a conexão <span class="destaque">FTP</span> tradicional, protegendo os dados e as
                 senhas.
             </li>
             <li>
-                SFTP(SSH File Transfer Protocolo): Embora muitas vezes seja
-                confundido com o FTP, ele tecnicamente é outro protocolo que 
-                roda inteiramente sobre o SSH(Camada de Transporte segura),
-                utilizando geralmente a porta 22. É o padrão mais utilizado
+                <span class="destaque">SFTP(SSH File Transfer Protocolo)</span>: Embora muitas vezes seja
+                confundido com o <span class="destaque">FTP</span>, ele tecnicamente é outro protocolo que 
+                roda inteiramente sobre o <span class="destaque">SSH</span>(Camada de Transporte segura),
+                utilizando geralmente a porta <span class="destaque">22</span>. É o padrão mais utilizado
                 hoje para gerenciar arquivos em servidores web de forma segura.
             </li>
         </ul>
@@ -1523,10 +1523,10 @@ const conteudoRede = {
                 diretórios remotos de sistemas.
             </li>
             <li>
-                Situação atual: o FTP clássico em texto plano esta
+                Situação atual: o <span class="destaque">FTP</span> clássico em texto plano esta
                 praticamente obsoleto e bloqueado em ambientes 
                 prifissionais devido ao risco de segurança, sendo
-                substituido pelo SFTP ou serviços baseado em nuvem.
+                substituido pelo <span class="destaque">SFTP</span> ou serviços baseado em nuvem.
             </li>
         </ul>
 
@@ -1544,15 +1544,15 @@ const conteudoRede = {
         conteudo: `
 
         <p>
-            O <span class="destacar">SMTP</span>(Simple Mail Transfer Protocol ou Protocolo de Simples
-            Transferência de Correio) é o protocolo padrão da <span class="destacar">Camada
-            de Aplicação</span> responsável pelo <span class="destacar">envio e encaminhamento de 
+            O <span class="destaque">SMTP</span>(Simple Mail Transfer Protocol ou Protocolo de Simples
+            Transferência de Correio) é o protocolo padrão da <span class="destaque">Camada
+            de Aplicação</span> responsável pelo <span class="destaque">envio e encaminhamento de 
             e-mail</span> na internet.
         </p>
 
         <p>
-            Enquanto o HTTP lida com páginas web e o FTP com arquivos,
-            o SMTP é o carteiro digital que pega a mensagem que você
+            Enquanto o <span class="destaque">HTTP</span> lida com páginas web e o <span class="destaque">FTP</span> com arquivos,
+            o <span class="destaque">SMTP</span> é o carteiro digital que pega a mensagem que você
             escreveu e garante que ela seja entregue do seu servidor
             de e-mail até o servidor de e-mail do destinatário.
         </p>
@@ -1561,8 +1561,8 @@ const conteudoRede = {
 
         <p>
             O SMTP opera predominantemente no modelo Cliente-servidor,
-            utilizando a porta 25(para transferência entre servidores)
-            ou as portas 465/587(para envio de e-mails de clientes,
+            utilizando a porta <span class="destaque">25</span>(para transferência entre servidores)
+            ou as portas <span class="destaque">465/587</span>(para envio de e-mails de clientes,
             como o seu aplicativo de e-mail, para o servidor).
         </p>
 
@@ -1572,25 +1572,25 @@ const conteudoRede = {
 
         <ol>
             <li>
-                <span class="destacar">Compsição (MUA):</span> Você usa um programa cliente de e-mail
+                <span class="destaque">Compsição (MUA):</span> Você usa um programa cliente de e-mail
                 (como o Gmail, Outlook ou Thunderbird) para escrever
                 a mensagem e clica em Enviar.
             </li>
             <li>
-                <span class="destacar">Envio para o Servidor de Saída:</span> O seu cliente de e-mail
-                se conecta ao servidor SMTP da sua  provedora usando
-                o protocolo SMTP
+                <span class="destaque">Envio para o Servidor de Saída:</span> O seu cliente de e-mail
+                se conecta ao servidor <span class="destaque">SMTP</span> da sua  provedora usando
+                o protocolo <span class="destaque">SMTP</span>
             </li>
             <li>
-                <span class="destacar">Roteamento de Servidor para Servidor:</span> O servidor SMTP
-                de origem consulta os registros DNS(MX) do domínio
+                <span class="destaque">Roteamento de Servidor para Servidor:</span> O servidor SMTP
+                de origem consulta os registros <span class="destaque">DNS(MX)</span> do domínio
                 de destino para descobrir qual é o servidor de e-meial
                 responsável por receber as mensagens da pessoa para 
                 quem você enviou.
             </li>
             <li>
-                <span class="destacar">Entrega:</span> O servidor de origem transfere a mensagems
-                via SMTP para o servidor de destino, que a armazena
+                <span class="destaque">Entrega:</span> O servidor de origem transfere a mensagems
+                via <span class="destaque">SMTP</span> para o servidor de destino, que a armazena
                 na caixa postal do destinatário.
             </li>
         </ol>
@@ -1598,9 +1598,9 @@ const conteudoRede = {
         <h4> O SMTP é apenas para enviar e-mails! </h4>
 
         <p>
-            Uma confusão muito comum é achar que o SMTP faz todo
-            o trabalho do e-mail. Na verdade, <span class="destacar">o SMTP server
-            estritamente para o envio e o repassa</span>.
+            Uma confusão muito comum é achar que o <span class="destaque">SMTP</span> faz todo
+            o trabalho do e-mail. Na verdade, o <span class="destaque">SMTP</span> server
+            estritamente para o envio e o repassa.
         </p>
 
         <p>
@@ -1611,12 +1611,12 @@ const conteudoRede = {
 
         <ol>
             <li>
-                <span class="destacar">POP3(Post Office Protocol):</span> Baixa os e-mails do 
+                <span class="destaque">POP3(Post Office Protocol):</span> Baixa os e-mails do 
                 servidor para seu dispositivo e, por padrão,
                 os apaga do servidor
             </li>
             <li>
-                <span class="destacar">IMAP(Internet Message Access Protocol):</span> Sincroniza 
+                <span class="destaque">IMAP(Internet Message Access Protocol):</span> Sincroniza 
                 os e-mails diretamente no servidor, permitindo que
                 você acesse a mesma caixa de entrada de vários
                 dispositivos diferentes(Celular, computador, web)
@@ -1628,7 +1628,7 @@ const conteudoRede = {
 
         <p>
             Assim como os outros protocolos clássicos da internet. o 
-            SMTP original foi criado sem criptografia, o que permitia
+            <span class="destaque">SMTP</span> original foi criado sem criptografia, o que permitia
             que qualquer pessoa interceptasse o tráfego de mensagens
             no meio do caminho.
         </p>
@@ -1640,15 +1640,15 @@ const conteudoRede = {
 
         <ol>
             <li>
-                <span class="destacar"> SMTP com STARTTLS/SMTPS:</span> Adiciona criptografia TLS
-                sobre a comunicação SMTP(portas 465 ou 587), 
+                <span class="destaque"> SMTP com STARTTLS/SMTPS:</span> Adiciona criptografia <span class="destaque">TLS</span>
+                sobre a comunicação <span class="destaque">SMTP</span>(portas <span class="destaque">465</span> ou <span class="destaque">587</span>), 
                 embaralhando os dados de autenticação e o corpo da
                 mensagem.
             </li>
             <li>
-                <span class="destacar"> Autenticação e Proteção contra Spam: </span> Mecanismo como
-                SPF, DKIM e DMARC são configurados via DNS em 
-                conjunto com o SMTP para provar que o servidor
+                <span class="destaque"> Autenticação e Proteção contra Spam: </span> Mecanismo como
+                <span class="destaque">SPF, DKIM e DMARC</span> são configurados via <span class="destaque">DNS</span> em 
+                conjunto com o <span class="destaque">SMTP</span> para provar que o servidor
                 que está enviando o e-mail é realmente legítimo,
                 evitando fraudes e falsificações de remetente(
                 phishing).
