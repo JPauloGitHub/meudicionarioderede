@@ -74,6 +74,14 @@ main section#corpo-conteudo {
     background-color: rgba(0,0,0,0);
 }
 
+main section#corpo-conteudo img.img-tcp {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 50px 0px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
 main section#corpo-conteudo h4 {
    font-size: 1.1rem;
    font-weight: 600;

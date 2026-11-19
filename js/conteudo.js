@@ -1657,6 +1657,734 @@ const conteudoRede = {
         
         <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
         `
-    }
+    },
+
+    /******************************************************************************* */
+
+    "pop3": {
+        titulo: "Protocolo POP3",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">POP3</span>(Post Office Protocol version 3) é
+            um protocolo padrão da camada de aplicação(modelo TCP/IP e OSI)
+            utilizado por clientes de e-mail(como Outlook, Thunderbird ou Apple
+            Mail) para <span class="destaque">baixar mensagens de um servidor remoto para um dispositivo
+            local</span>.
+        </p>
+
+        <p>
+            Diferente de protocolos modernos modernos focados em nubem, o POP3
+            foi projetado na década de 1980 com a filosofia de <span class="destaque>"baixar e apagar"</span>:
+            ele transfere os e-mails para o seu computador ou celular e, por padrão, 
+            remove as cópias do servidor para economizar espaço.
+        </p>
+
+        <h4> Como funciona na prática(Ciclo de Vida) </h4>
+
+        <p>
+            O POP3 opera sobre o protocolo de transporte <span class="destaque">TCP</span>,
+            garantindo entrega confiável e ordenada, e passa
+            por três estados distintos durante uma sessão:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">Autorização(Authorization)</span>: O cliente
+                abre uma conexão TCP como o servidor e envia
+                suas credenciais<span class="destaque">(USER e PASS)</span> para autenticação.
+            </li>
+            <li>
+                <span class="destaque">Transação(Transaction)</span>: O cliente
+                solicita a lista de mensagens<span class="destaque">(LIST)</span>, baixa os e-mails
+                desejados<span class="destaque">(RETR)</span> e marca os que devem ser excluídos<span class="destaque">(DELE)</span>.
+                Durante essa fase, o servidor apenas marca os itens
+                para exclusão, sem apagá-los imediatamente.
+            </li>
+            <li>
+                <span class="destaque">Atualização(Update)</span>: Ocorre quando o cliente encerra a sessão
+                enviando o comando <span class="destaque">QUIT</span>. Nesse momento, o servidor executa 
+                definitivamente a exclusão das mensagens marcadas e libera
+                os recursos.
+            </li>
+        </ol>
+
+        <h4> Características Técnicas Principais </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Portas Padão:</span>
+
+                <ul>
+                    <li>
+                        <span class="destaque">Porta 110</span>: Conexão padrão sem criptografia(pode 
+                        ser atualizada para criptografia via comando
+                        <span class="destaque">STLS / STARTTLS</span>).
+                    </li
+                    <li>
+                        <span class="destaque">Porta 995(POP3S)</span>: Conexão segura criptografada 
+                        <span class="destaque">SSL/TLS</span> implícita(padrão exigido pela maioria
+                        dos provedores atuais).
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="destaque">Direção do Tráfego</span>: É um protocolo estritamente de recebimento(
+                <span class="destaque">servidor->cliente</span>). para enviar e-mails, o cliente usa outro
+                protocolo, o <span class="destaque">SMTP</span>.
+            </li>
+            <li>
+                <span class="destaque">Acesso Offline</span>: Como os arquivos ficam armazenados localmente
+                no disco do dispositivo, você pode ler, pesquisar e gerenciar
+                e-mails antigos sem precisar de conexão com a internet.
+            </li>
+            <li>
+                Comandos baseados em texto: Assim como o <span class="destaque">HTTP e o SMTP</span>,
+                utiliza comandos simples em <span class="destaque">ASCII(STAT, LIST, RETR, DELE,
+                NOOP, RSET, QUIT)</span> e resposta curtas iniciadas por <span class="destaque">+OK</span> 
+                (sucesso) ou <span class="destaque">-ERR</span>(erro).
+            </li>
+        </ul>
+
+        <h4> POP3 vs IMAP vs SMTP </h4>
+
+
+        <ul>
+            <li>
+                <span class="destaque">POP3:</span>
+                <ul>
+                    <li>
+                        Função -> Recebimento(Download)
+                    </li>
+                    <li>
+                        Onde ficam os e-emails -> Armazenados localmente no dispostivos
+                    </li>
+                    <li>
+                        Mútiplos dispositivos -> Ruim(não sincroniza status de 
+                        lido/pastas)
+                    </li>
+                    <li>
+                        Uso de espaço no servidor -> Baixo(apaga após baixar, por
+                        padrão)
+                    </li>
+                    <li>
+                        Portas principais -> 110/995(SSL/TLS)
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="destaque">IMAP:</span>
+                <ul>
+                    <li>
+                        Função -> Recebimento(Sincronização)
+                    </li>
+                    <li>
+                        Onde ficam os e-emails -> Mantidos no servidor remoto
+                    </li>
+                    <li>
+                        Mútiplos dispositivos -> Excelente(sincroniza tudo em 
+                        tempo real)
+                    </li>
+                    <li>
+                        Uso de espaço no servidor -> Alto(acumula mensagens na
+                        nuvem)
+                    </li>
+                    <li>
+                        Portas principais -> 143/993(SSL/TLS)
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="destaque">SMTP:</span>
+                <ul>
+                    <li>
+                        Função -> Envio e encaminhamentos
+                    </li>
+                    <li>
+                        Onde ficam os e-emails -> Apenas transita até o destino
+                    </li>
+                    <li>
+                        Mútiplos dispositivos -> N/A
+                    </li>
+                    <li>
+                        Uso de espaço no servidor -> N/A
+                    </li>
+                    <li>
+                        Portas principais -> 25/465/587
+                    </li>
+                </ul>
+            </li>         
+        </ul> 
+
+        <h4> Vantagens e Desvantagens </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Vantagens:</span>
+                <ul>
+                    <li>
+                        Privacidade e backup local: Você detém a posse física dos 
+                        arquivos (como .pst ou .mbox), sem depender de servidor
+                        de terceiros para acessar seu histórico.
+                    </li>
+                    <li>
+                        Economia de armazenamento na nuvem: Ideal para servidores
+                        corporativos antigos ou planos de hospedagem com limite
+                        rígido de espaço em disco.
+                    </li>
+                    <li>
+                        Leitura offline completa: Todo o conteúdo e anexo já
+                        estaõ baixados na máquina.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="destaque">Desvantagens:</span>
+                <ul>
+                    <li>
+                        Falta de sincronização: Se você ler ou apagar um 
+                        e-mail no computador, ele continuará aparecendo
+                        como "não lido" se você abrir a conta no celular
+                        (caso tenha configurado o cliente para manter
+                        uma cópia no servidor).
+                    </li>
+                    <li>
+                        Risco de perda de dados: Se o dispositivos local
+                        sofrer falha de hardware sem backup, todos os
+                        e-mails baixados e apagados do servidor serão
+                        perdidos permantemente.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+    /************************************************************************ */
+
+    "imap": {
+        titulo: "Protocolo IMAP",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">IMAP</span>(Internet Message Access Protocol ou
+            Protocolo de Acesso a Mensagens da Internet) é o protocolo da <span class="destaque">Camada
+            de Aplicação</span> responsável por <span class="destaque">acessar, gerenciar e sincronizar e-mails
+            diretamente no servidor</span>.
+        </p>
+
+        <p>
+            Enquanto o <span class="destaque">SMTP</span> cuida do envio da mensagem, o <span class="destaque">IMAP</span> é o protocolo
+            que permite que você leia e organize os seus e-mails mantendo tudo
+            centralizado e sincronizado na nuvem.
+        </p>
+
+        <h4> O Problema Histórico: <span class="destaque">IMAP vs POP3</span> </h4>
+
+        <p>
+            Para entender a genialidade do <span class="destaque">IMAP</span>, vale a pena compará-lo
+            com seu antecessor direto, o <span class="destaque">POP3</span>(Post Office Protocol):
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Como o POP3 funcionava(e ainda funciona em casos específicos)</span>:
+                Quando seu aplicativo de e-mail se conectava via POP3, ele
+                <span class="destaque">baixava</span> as mensagens para seu dispositivos físico(computador
+                ou celular) e, por padrão, <span class="destaque">apagava cópias do servidor</span>.
+                Isso significava que se você lesse o e-mail no computador
+                do trabalho, ele sumia do seu celular ou da versão web,
+                gerando uma grande fragmentação.
+            </li>
+            <li>
+                <span class="destaque">Como o IMAP resolve isso</span>: O IMAP foi criado para a era
+                dos múltiplos dispositivos. <span class="destaque">Ele mantém os e-mails
+                armazenados no servidor</span>, permitindo que vários 
+                aparelhos diferentes acessem a mesma caixa postal
+                simultaneamente.
+            </li>
+        </ul>
+
+        <h4> Como o <span class="destaque">IMAP</span> Funciona na Prática? </h4>
+
+        <p>
+            Com o IMAP, existe uma <span class="destaque">sincronização bidirecional
+            constante</span> entre o seu dispositivo(cliente)
+            e o servidor de e-mail:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">Estado centralizado</span>: As mesmas, pastas(Caixas de
+                entrada, Enviados, Lixeira, Pastas personalizadas)
+                e os estados dos e-mails(lido, não lido, marcado com 
+                estrela) ficam salvos no servidor.
+            </li>
+            <li>
+                <span class="destaque">Atualização em tempo real</span>: Se você recebe uma mensagem
+                no celular e a marca como "lida", essa alteração é
+                enviada imediatamente ao servidor. Quando você abre o
+                notebook, o e-mail tembém aparecerá como lido.
+            </li>
+            <li>
+                <span class="destaque">Gerenciamento remoto</span>: Se você apagar um e-mail no 
+                tablet, ele é apagado do servidor e desaparece de
+                todos os outros aparelhos conectados.
+            </li>
+        </ol>
+
+        <h4> Portas e Segurança </h4>
+
+
+        <ul>
+            <li>
+                <span class="destaque">Porta padrão(não segura)</span>: Porta 143(envia dados
+                em texto plano).
+            </li>
+            <li>
+                <span class="destaque">Porta segura(IMAPS)</span>: Porta 993, que utiliza
+                criptografia <span class="destaque">TLS/SSL</span> sobre o canal <span class="destaque">IMAP</span>, garantindo
+                qua suas credenciais de login e o conteúdo das
+                suas mensagens não possam ser interceptados na rede.
+            </li>
+
+        <h4> Resumo das Aplicações </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Para que serve</span>: Acessar a mesma conta de e-mail em
+                múltiplos dispositivos(smartphone, tablet, notbook
+                e webmail) mantendo todo o histórico perfeitamente
+                sincronizado.
+            </li>
+            <li>
+                <span class="destaque">Cenário atual</span>: É o padrão absoluto de mercado para 
+                serviços de e-mail corporativo e pessoal(como Gmail,
+                Outlook e servidores de hospedagem próprios), tornando
+                o POP3 obsoleto para grande maioria dos usuários modernos.
+            </li>
+        </ul>
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+    /************************************************************************ */
+
+    "dns": {
+        titulo: "Protocolo DNS",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">DNS</span>(Domain System ou Sistema de Nomes de Domínio) é 
+            frequentemente chamado de <span class="destaque">"a agenda telefônica da internet"</span>. Ele é o protocolo
+            da <span class="destaque">Camada de Aplicação</span> responsável por traduzir nomes de domínio fáceis de
+            lembrar(como google.com ou youtube.com) em <span class="destaque">endereços IP</span> numériocos que os
+            computadores realmente usam para se encontrar na rede(como 142.250.190.46).
+        </p>
+
+        <h4> Por que o <span class="destaque">DNS</span> é necessário? </h4>
+
+        <p>
+            Os computadores, roteadores e servidores conversam ente si
+            usando <span class="destaque">endereços IP</span>(como o IPv4 192.0.2.1 ou IPv6 2001:db8::).
+            No entanto, seria humanamente impossível memorizar
+            sequências numéricas para cada site de visitamos diariamente.
+        </p>
+
+        <p>
+            O DNS resolve esse problema criando uma camada de abstração:
+            você digita o nome amigável no navegador e o DNS faz a ponte 
+            para descobrir o número IP exato por trás daquele site.
+        </p>
+
+        <h4> Como o <span class="destaque">DNS</span> Funciona?(o Passo a Passo) </h4>
+
+        <p>
+            Quando voce digita exemplo.com na barra de endereço e
+            aperta Enter, ocorre uma verdadeira "investigação em 
+            cadeia" nos bastidores em frações de segundo:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">Consulta Local(Cache)</span>: O seu computador verifica se já
+                lembra do IP desse site recetemente salvo na memória(cache).
+                Se não encontrar, pergunta para o roteador ou para o 
+                servidor DNS da sua operadora.
+            </li>
+            <li>
+                <span class="destaque">Servidor Raiz(Root Server)</span>: Se o servidor DNS local não
+                sabe a resposta, ele recorre a um dos 13 servidores rais
+                distribuídos pelo mundo. O servidor raiz diz: "Não sei
+                o IP exato mais sei quem cuida da extensão .com"
+            </li>
+            <li>
+                <span class="destaque">Servidor de Domínio de Nível Superior(TLD Server)</span>:
+                O Sistema consulta o servidor responsável pela extensão(
+                .com, .br, .org, etc.). Ele responde: "Não sei o site
+                todo, mais o domínio exemplo.com é gerenciado por este
+                servidor especifico".
+            </li>
+            <li>
+                <span class="destaque">Servidor Autoritativo(Authoritative Name Server)</span>: Por
+                por fim, o sistema pergunta ao servidor definitivo do 
+                dono do site(o servidor autoritativo). Ele retorna
+                o <span class="destaque">endereço IP correto</span>.
+            </li>
+            <li>
+                <span class="destaque">Conexão Estabelecida</span>: Com o IP em mãos, o seu navegador
+                finalmente consegue iniciar a conexão HTTP/HTTPS com
+                o servidor do site
+            </li>
+        </ol>
+
+        <p>
+            (Todo esse caminho complexo geralmente acontece em 
+            <span class="destaque">menos de 50 milissegundos</span> graças ao sistemas de cache).
+        </p>
+
+        <h4> Os Principais Tipos de Registros <span class="destaque">DNS</span> </h4>
+
+        <p>
+            Dentro de um painel de domínio, existem diferentes tipos
+            de registros(records) que dizem ao DNS o que fazer
+            com cada informação:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Registro A</span>: Aponta um domínio para um endereço <span class="destaque">IPv4</span>(
+                ex: exemplo.com -> 192.0.2.1).
+            </li>
+            <li>
+                <span class="destaque">Registro AAAA</span>: Aponta um domínio para um endereço <span class="destaque">IPv6</span>(
+                endereços mais longos e modernos).
+            </li>
+            <li>
+                <span class="destaque">Registro CNAME(Canonical Name)</span>: Cria um "apelido"
+                para um domínio(ex: fazer com que [www.exemplo.com](
+                https://www.exemplo.com) aponte para exemplo.com).
+            </li>
+            <li>
+                <span class="destaque">Registro MX(Mail Exchange)</span>: Indica qual é o servidor 
+                responsável por receber os e-mail daquele domínio(
+                essencial para funcionamento do SMTP que vimos antes).
+            </li>
+            <li>
+                <span class="destaque">Registro TXT</span>: Armazena textos arbitrários, muito usados
+                para validação de segurança e configuração ante-spam(
+                como SPF, DKIM e DMARC).
+            </li>
+        </ul>
+
+        <h4> A Importância da Segurança no <span class="destaque">DNS(DNSSEC) e DNS</span> Alternativos </h4>
+
+        <p>
+            O protocolo DNS tradicional foi criado sem criptografia, o que
+            abria brechas para ataques perigosos, como o DNS Spoofing(
+            onde um invasor desviava o tráfego do usuário para um site
+            falso idêntico).
+        </p>
+
+        <p>
+            Para mitigar issom, surgiram melhorias:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">DNSSEC</span>: Adiciona assinatura criptográfica aos registros DNS
+                para garantir que a resposta veio de uma fonte legítima e não
+                foi adulterada.
+            </li>
+            <li>
+                <span class="destaque">DoH e DoT(DNS over HTTPS/DNS over TLS)</span>: Criptografam as 
+                consultas DNS para que nem mesmo a sua operadora de
+                internet consiga ver quais sites você esta acessando.
+            </li>
+            <li>
+                <span class="destaque">Servidores DNS Públicos</span>: Você pode substituir o DNS
+                padrão da sua operadora por serviçoes mais rápidos
+                e seguros, como o <span class="destaque">Cloudflare</span>(1.1.1.1), <span class="destaque">Google</span>(
+                8.8.8.8) ou <span class="destaque">Quad9</span>(9.9.9.9).
+            </li>
+        </ul>       
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+
+    /************************************************************************ */
+
+    "dhcp": {
+        titulo: "Protocolo DHCP",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">DHCP</span>(Dynamic Host Configuration ou Protocolo de Configuração
+            Dinâmica de Host) é o protocolo de rede que <span class="destaque">atribui automaticamente configurações
+            de rede</span>(como endereço IP, máscara de sub-rede, gateway padrão 
+            servidores DNS) aos dispositivos assim que eles entram em uma rede.
+        </p>
+
+        <p>
+            Imagine ter que configurar manualmente um endereço IP,
+            máscara de gateway toda vez que seu smartphone conecta Wi-Fi
+            de casa, do trabalho ou de uma cafeteria - além de 
+            cansativo, isso causaria conflitos constantes de IP.
+            O DHCP automatiza esse processo de forma transparente
+            e dinâmica, operando tipicamente sobre <span class="destaque">UDP</span>(portas <span class="destaque">67</span>
+            para o servidor e <span class="destaque">68</span> para o cliente).
+        </p>
+
+        <h4> O que o <span class="destaque">DHCP</span> entrega ao dispositivo? </h4>
+
+        <p>
+            Quando um host(computador, celular, impressora, notebook)
+            solicita configuração via DHCP, ele geralmente recebe um
+            pacote completo de parâmetros:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Endereço IP</span>: A identificação lógica do dispositivo nquela
+                rede local(ex: 192.168.1.42).
+            </li>
+            <li>
+                <span class="destaque">Máscara de Sub-rede</span>: Define qual parte do IP corresponde
+                à rede e qual parte identifica o host(ex: 255.255.255.0 ou /24).
+            </li>
+            <li>
+                <span class="destaque">Gateway Padrão(Default Gateway)</span>: Geralmente o IP do roteador
+                local (ex: 192.168.1.1), por onde saem os pacotes destinados
+                a outras redes ou à internet.
+            </li>
+            <li>
+                <span class="destaque">Servidores DNS</span>: Os endereços dos servidores que farão a resolução
+                de nomes de domínio(que vimos no passo anterior).
+            </li>
+            <li>
+                <span class="destaque">Tempo de Concessão(Lease Time)</span>: Por quanto tempo aquele IP
+                fica reservado para o dispositivo antes de precisar
+                ser renovado.
+            </li>
+        </ul>
+
+        <h4> Como o <span class="destaque">DHCP</span> funciona: O processo <span class="destaque">DORA</span> </h4>
+
+        <p>
+            A negociação clássica no DHCPv4 segue quatro etapas
+            conhecidas pela sigla <span class="destaque">DORA</span>:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">Discover(Descoberta)</span>: O dispositivo recém-conectado
+                não tem IP ainda. Ele envia uma mensagem de broadcast
+                na rede local perguntando: "Existe algum servidor
+                DHCP por aqui?".
+            </li>
+            <li>
+                <span class="destaque">Offer(Oferta)</span>: Um servidor DHCP(muitas vezes o
+                próprio roteador doméstico ou um servidor dedicado
+                na rede corporativa) responde oferecendo um IP 
+                disponível pool(faixa de IPs), junto com máscara,
+                gateway e tempo de concessão.
+            </li>
+            <li>
+                <span class="destaque">Request(Solicitação)</span>: O cliente aceita a oferta e 
+                envia um broadcast informando que deseja utilizar
+                aquele IP oferecido(útil também se mais de um
+                servidor DHCP tiver respondido).
+            </li>
+            <li>
+                <span class="destaque">Acknowledge(Confirmação / ACK)</span>: O servidor DHCP
+                confirma formalmente a concessão e registra o
+                vínculo entre o endereço <span class="destaque">MAC</span> do cliente e o <span class="destaque">IP</span>
+                entregue durante o lease time.
+            </li>
+        </ol>
+
+        <h4> DHCP Dinâmico vs Reserva de IP(DHCP Estático) </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Alocação Dinâmica</span>: O IP é emprestado por um tempo
+                determinado(lease time). Se o dispositivo desconec-
+                ta e o prazo expira, o IP pode voltar ao conjunto
+                disponível para outro aparelho.
+            </li>
+            <li>
+                <span class="destaque">Reserva / IP Fixo via DHCP(Static DHCP)</span>: O 
+                administrador associa permanetemente um endereço
+                <span class="destaque">MAC</span> específico a um determinado <span class="destaque">IP</span> no servidor
+                DHCP. Assim, o dispositivo sempre recebe o mesmo
+                IP automaticamente - muito útil para servidores
+                locais, impressoras de rede ou câmeras IP sem
+                precisar configurar manualmente em cada máquina.
+            </li>
+        </ul> 
+        
+        <h4> Resumo na Prática </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Camada / Transporte</span>: Funciona no nível de configuração
+                de host/aplicação utilizando <span class="destaque">UDP</span>(portas 67 e 68).
+            </li>
+            <li>
+                <span class="destaque">Benefício central</span>: Evita conflitos de endereço IP,
+                reduz erros humanos e facilita a entrada e saída de
+                dispositivos móveis em redes <span class="destaque">LAN e WLAN</span>.
+            </li>
+        </ul>
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+
+    /************************************************************************ */
+
+    "tcp": {
+        titulo: "Camada TCP",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">TCP</span>(Transmission Control Protocol ou Protocolo de
+            transmissão) é o protocolo da <span class="destaque">Camada de Transporte</span> (no modelo TCP/IP e na 
+            camada 4 do modelo OSI) projetado para entregar dados de forma
+            <span class="destaque">confiável, ordenada e orientada à conexão</span>.
+        </p>
+
+        <p>
+            Enquanto a camada de Rede(IP) cuida de levar pacotes de 
+            endereço IP a outro sem garantir que todos cheguem in-
+            tactos ou na ordem certa. o TCP atua como o "gerente
+            de qualidade" da entrega: ele assegura que o arquivo,
+            página web ou mensagem chegue completa e remontada
+            corretamente no destino.
+        </p>
+
+
+        <img src="img/tcpxudp.png" class="img-tcp" />
+
+        <h4> Como o TCP Funciona? </h4>
+
+        <p>
+            1. Conexão Orientada a Three-Way Handshake
+            Antes de enviar dados de aplicação, o TCP estabelece uma
+            conexão lógica entre cliente e servidor por meio do <span class="destaque">aperto
+            de mão de três vias(Three-Way Handshake)</span>:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">SYN</span>: O cliente envia um segmento com a flag <span class="destaque">SYN</span>(Synchronize)
+                e um número de sequência inicial para iniciar a conversa.
+            </li>
+            <li>
+                <span class="destaque">SYN-ACK</span>: O servidor responde com <span class="destaque">SYN e ACK</span>(Acknowledge),
+                confirmando que recebeu o pedido e enviando seu próprio
+                número de sequência inicial.
+            </li>
+            <li>
+                <span class="destaque">ACK</span>: O cliente envia um <span class="destaque">ACK</span> final confirmando a conexão.
+                A partir daqui, a troca de dados ocorre.
+            </li>
+        </ol>
+
+        <p>
+            Para encerrar a conexão de forma limpa, o protocolo
+            utiliza trocas com as flags <span class="destaque">FIN</span>(Finish) e <span class="destaque">ACK</span>(ou RST
+            em resets abruptos).
+        </p>
+
+        <h4> Confiabilidade, Números de Sequência e Confirmações(<span class="destaque">ACK</span>) </h4>
+
+        <p>
+            O <span class="destaque">TCP</span> trata os dados da aplicação como um fluxo contínuo
+            de bytes e os divide em segmentos. Cada byte/segmento
+            recebe um <span class="destaque">Número de Sequência</span>(Sequence Number) e o 
+            recptor devolve <span class="destaque">Números de Confirmação</span>(Acknowledgment
+            Number):
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Retransmissão</span>: Se um segmento se perder ou demora
+                além do timeout, o remetente reenvia o trecho não
+                confirmado.
+            </li>
+            <li>
+                <span class="destaque">Reordenação</span>: Se os segmentos chegarem fora de ordem
+                pela rede, o TCP os reorganiza antes de entregar
+                à camada de Aplicação.
+            </li>
+            <li>
+                <span class="destaque">Integridade</span>: O campo <span class="destaque">Checksum</span> ajuda a detectar 
+                corrupção de dados no cabeçalho ou no payload.
+            </li>
+        </ul>
+
+        <h4> Controle de Fluxo e Controle de Congestionamento </h4>
+
+        <p>
+            Para não sobrecarregar nem o receptor nem a rede
+            intermediária, o TCP gerencia o ritmo de envio:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Controle de Fluxo(Window Size)</span>: O receptor informa
+                quanta memória de buffer disponível ele tem para
+                receber dados, evitando estourar sua capacidade de
+                processamento.
+            </li>
+            <li>
+                <span class="destaque">Controle de Congestionamento</span>: O remetente ajusta sua
+                taxa de envio ao detectar perdas de pacotes ou 
+                aumento de RTT, reduzindo o tráfego em momentos de 
+                congestionamento na rede(com algoritmos como Slow
+                Start, Congestion Avoidance, Fast Retransmit e
+                Fast Recovery).
+            </li>
+        </ul> 
+        
+        <h4> Portas e Cabeçalho do Segmento TCP </h4>
+
+        <p>
+            O TCP usa <span class="destaque">portas de 16 bits</span>(de 0 a 65535) para identificar qual
+            processo ou serviço de rede deve receber os dados dentro de um
+            mesmo host - por exemplo, porta 80(HTTP), 443(HTTPS), 21(FTP)
+            ou 22(SSH).
+        </p>
+
+        <h4> Quando Usar TCP(e Quando Evitar) </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Ideal para</span>: Navegação web(HTTP/HTTPS), tranferência de 
+                arquivos(SFTP/FTP), e-mails(SMTP/IMAP), acesso remoto(SSH) 
+                e APIs onde a perda ou troca de ordem de um único byte
+                compromente o resultado.
+            </li>
+            <li>
+                <span class="destaque">Trade-off</span>: A confiabilidade exige overhead(cabeçalho maior,
+                controle de estado, confirmação e eventuais retransmissões),
+                o que adiciona latência em cenários sensíveis ao tempo real.
+                É exatamente esse custo que motiva o uso do <span class="destaque">UDP</span> em aplicações
+                que priorizam baixa latência sobre entrega garantida.
+            </li>
+        </ul>
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+
 
 }
