@@ -2385,6 +2385,174 @@ const conteudoRede = {
         `
     },
 
+    /************************************************************************ */
+
+    "udp": {
+        titulo: "Camada UDP",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">UDP</span>(User Datagram Protocol ou Protocolo de
+            Datagrama de Usuário) é o protocolo da <span class="destaque">Camada de Transporte</span>(Camada
+            4 do OSI/Transporte no TCP/IP) focado em <span class="destaque">velocidade, simplicidade
+            e baixa latência</span>, em vez de confiabilidade garantida.
+        </p>
+
+        <p>
+            Enquanto o TCP funciona como um serviço de entrega registrada
+            com confirmação e reenvio, o UDP age como o envio de <span class="destaque">datagrama</span>
+            independentes("dispara e segue"): ele envia os dados sem 
+            estabelecer conexão prévia, sem exigir confirmação de 
+            recebimento(ACK) e sem retransmitir pacotes perdidos.
+        </p>
+
+        <h4> Como o UDP Funciona? </h4>
+
+        <p>
+            <span class="destaque">1. Sem Conexão(Connectionless)</span>
+            O UDP não realiza Three-Way Handshake(<span class="destaque">SYN, SYN-ACK, ACK</span>) antes de 
+            transmitir. O remetente simplesmente monta o <span class="destaque">datagrama UDP</span> e o 
+            envia pela camada de Rede(IP) assim que há dados prontos. Isso
+            elimina o atraso inicial de estabelecimento de conexão e reduz
+            o estado mantido nos hosts.
+        </p>
+
+        <h4> Sem Garantia de Entrega, Ordem ou Retransmissão </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Perda de pacotes</span>: Se um datagrama se perder no caminho
+                ou for descartado por congestionamento, o UDP não o reenvia.
+            </li>
+            <li>
+                <span class="destaque">Fora de ordem</span>: Datagramas diferentes podem seguir rotas
+                distintas e chegar fora de sequência; o UDP não reordena
+                automaticamente.
+            </li>
+            <li>
+                <span class="destaque">Sem controle de fluxo/congestionamento</span>: O UDP não regula
+                o ritmo de envio com base no buffer do receptor ou 
+                no congrestionamento da rede(a menbos que a própria
+                aplicação implemente algum mecanismo próprio).
+            </li>
+        </ul>
+
+        <h4> Multiplexação por Portas e Verificação Básica </h4>
+
+        <p>
+            Assim como o TCP, o UDP usa <span class="destaque">Portas de 16 bits</span>(0 a 65535)
+            para direcionar cada datagrama ao processo/aplicação correta
+            no destino, e inclui um campo <span class="destaque">Checksum</span>(opcional no IPv4,
+            obrigatório no IPv6) para detectar alterações acidentais
+            nos bits do datagrama.
+        </p>
+
+        <h4> Cabeçalho Minimalista do Datagrama UDP </h4>
+
+        <p>
+            Uma das grandes vantagens do UDP é seu overhead 
+            baixíssimo: o cabeçalho tem apenas <span class="destaque">8 bytes</span>(contra
+            20 a 60 bytes do TCP), composto por apenas 4 campos
+            de 16 bits:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Source Port(16 bits)</span>: Porta de origem.
+            </li>
+            <li>
+                <span class="destaque">Destination Port(16 bits)</span>: Porta de destino.
+            </li>
+            <li>
+                <span class="destaque">Length(16 bits)</span>: Tamanho total do datagrama UDP(cabeçalho
+                + dados da aplicação).
+            </li>
+            <li>
+                <span class="destaque">Checksum(16 bits)</span>: Soma de verificação para detcção de erros.
+            </li>
+        </ul>
+
+        <h4> Quando Usar UDP(e Como Ele Aparece na Prática) </h4>
+
+        <p>
+            O UDP brilha quando <span class="destaque">dados atrasados perdem o valor</span> e 
+            retransmir um pacote antigo atrapalharia mais do que 
+            simplesmente seguir com o próximo:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Jogos online em tempo real</span>: A posição de um jogador
+                daqui a 200ms vale muito mais do que retransmitir
+                onde ele estava há meio segundo.
+            </li>
+            <li>
+                <span class="destaque">VoIP e chamadas de vídeo/áudio</span>: Em conversas ao vivo,
+                retransmissões causam pausas e eco; perder um pequeno
+                trecho imperceptível é preferível a travar o fluxo.
+            </li>
+            <li>
+                <span class="destaque">Streaming ao vivo/mídia em tempo real</span>: Prioriza continuidade
+                e baixa latência.
+            </li>
+            <li>
+                <span class="destaque">DNS e DHCP</span>: Consultas rápidas de resolução de nomes
+                (DNS tradicional) e concessão de IP(DHCP) se beneficiam
+                de trocas curtas sem o custo de abrir e fechar conexão TCP.
+            </li>
+            <li>
+                <span class="destaque">QUIC e HTTP/3</span>: Protocolos modernos como o <span class="destaque">QUIC</span>(base
+                do <span class="destaque">HTTP/3</span>) rodam <span class="destaque">sobre UDP</span> para reduzir a latência de
+                conexão e evitar o bloqueio de cabeça de linha(
+                head-of-line blocking) do TCP, implementando confiabilidade
+                e controle de congestionamento de forma mais ágil
+                no espaço de aplicação/transporte moderno.
+            </li>
+        </ul> 
+        
+        <h4> TCP vs UDP em Resumo </h4>
+
+        <table>
+            <tr>
+                <td> <span class="destaque">Característica</span> </td>
+                <td> <span class="destaque">TCP</span> </td>
+                <td> <span class="destaque">UDP</span> </td>
+            </tr>
+            <tr>
+                <td> Conexão </td>
+                <td> Orientado à conexão(Three-Way Handshake) </td>
+                <td> Sem conexão(Connectionless) </td>
+            </tr>
+            <tr>
+                <td> Confiabilidade </td>
+                <td> Alta(ACK, retransmissão, ordenação) </td>
+                <td> Baixa/Best-effort(sem garantia de entrega/ordem) </td>
+            </tr>
+            <tr>
+                <td> Cabeçalho </td>
+                <td> 20 a 60 bytes </td>
+                <td> 8 bytes fixos </td>
+            </tr>
+            <tr>
+                <td> Controle de fluxo/congestionamento </td>
+                <td> Sim </td>
+                <td> Não(fica a cargo da aplicação, se necessário) </td>
+            </tr>
+            <tr>
+                <td> Letência/Overhead </td>
+                <td> Maior overhead e atraso inicial </td>
+                <td> Menor overhead e menor latência </td>
+            </tr>
+            <tr>
+                <td> Exemplos de uso </td>
+                <td> HTTP/HTTPS, FTP/SFTP, SMTP, IMAP, SSH </td>
+                <td> Jogos online, VoIP, vídeo ao vivo, DNS, QUIC </td>
+            </tr>
+        </table>
+        
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
 
 
 }
