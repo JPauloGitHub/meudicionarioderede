@@ -74,7 +74,7 @@ main section#corpo-conteudo {
     background-color: rgba(0,0,0,0);
 }
 
-main section#corpo-conteudo img.img-tcp {
+main section#corpo-conteudo img.img-tcp, img.img-ipv4, img.img-ipv6 {
     max-width: 90%;
     height: auto;
     display: block;

@@ -2555,4 +2555,320 @@ const conteudoRede = {
     },
 
 
+    /************************************************************************ */
+
+    "ipv4": {
+        titulo: "Camada IPv4",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">IPv4</span>(Internet Protocol Version 4) é o protocolo
+            clássico da <span class="destaque">Camada de Rede</span>(Camda 3 do OSI/Camada de internet do TCP/IP)
+            responsável pelo <span class="destaque">endereçamento lógico e pelo roteamento
+            de pacotes</span> entre redes distintas.
+        </p>
+
+        <p>
+           Ele opera no modelo best-effort(melhor esforço possível),
+           sem estabelecer conexão nem garantir entrega ou ordem por si
+           só - essas garantias ficam a cargo de camadas superiores
+           (como o TCP). Ainda assim, é o IPv4 que define <span class="destaque">onde está
+           a rede de origem, onde fica a rede de destino e como
+           os roteadores encaminham cada pacote</span> até o alvo.
+        </p>
+
+        <h4> Como Funciona o Endereçamento <span class="destaque">IPv4</span>? </h4>
+
+        <p>
+            Um endereço IPv4 tem <span class="destaque">32 bits</span>, normalmente divididos em 
+            <span class="destaque">4 octetos</span>(blocos de 8 bits) e representados em <span class="destaque">notação
+            decimal pontuada</span> - por exemplo: <span class="destaque">192.168.10.25</span> como 
+            cada octeto vai de 0 a 255 (2^8=256 valores), o espaço
+            total do <span class="destaque">IPv4 e de 2^32</span>, o que dá cerca de <span class="destaque">4,29
+            bilhões de endereços</span> teóricos.
+        </p>
+
+        <p>
+            Todo endereço IPv4 se divide logicamente em duas
+            partes, separadas pela <span class="destaque">máscara de sub-rede</span>(ou
+            notação <span class="destaque">CIDR</span>, como <span class="destaque">/24</span>):
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Porção de Rede(Network)</span>: Identifica qual sub-rede específica
+                o dispositivo integra.
+            </li>
+            <li>
+                <span class="destaque">Porção de Host(Host)</span>: Identifica o dispositivo(interface)
+                dentro daquela rede.
+            </li>
+        </ul>
+
+        <img src="img/ipv4.png" class="img-ipv4" />
+
+        <h4> IPs Públicos, IPs Privados e o Esgatamento do <span class="destaque">IPv4</span> </h4>
+
+        <p>
+            Com 4,29 bilhões de endereços a bilhões de distpositivos
+            conectados, os endereços públicos globais se esgotaram.
+            Para contornar isso, a arquitetura IPv4 apoia-se em 
+            faixas <span class="destaque">privadas</span>(reservadas pela RFC 1918 para redes
+            locais e não roteáveis diretamente na Internet
+            pública) e em <span class="destaque">NAT</span>(Network Adress Translation):
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">10.0.0.0</span> a <span class="destaque">10.255.255.255(/8)</span>.
+            </li>
+            <li>
+                <span class="destaque">172.16.0.0</span> a <span class="destaque">72.31.255.255(/12)</span>.
+            </li>
+            <li>
+                <span class="destaque">192.168.0.0</span> a <span class="destaque">192.168.255.255(/16)</span>.
+            </li>
+        </ul>
+
+        <p>
+            Na prática, sua casa ou escritório usa um IP privado(
+            como 192.168.0.15), e o roteador traduz esse endereço
+            para IP público da conexão ao conversar com a internet.
+            Além disso, em uma sub-rede IPv4 clássica, o <span class="destaque">primeiro
+            IP</span> constuma representar o endereço de rede e o 
+            <span class="destaque">último IP</span> constuma ser o endereço de broadcast(envio
+            para todos os hosts daquela sub-rede).
+        </p>
+
+        <h4> Campos Essenciais do Cabeçalho <span class="destaque">IPv4</span> </h4>
+
+        <p>
+            O cabeçalho IPv4 padrão tem <span class="destaque">20 bytes</span>(podendo
+            chegar a 60 bytes com opções). Alguns campos
+            são fundamentais para o funcionamento da rede:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Versão(VER)</span>: Indica a versão do protocolo(4 para <span class="destaque">IPv4</span>).
+            </li>
+            <li>
+                <span class="destaque">Tempo de Vida(TTL - Time to Live)</span>: Um contador decres-
+                cente que evita que pacotes fiquem girando enternamente
+                em loops de roteamento. A cada roteador(hop) que o 
+                pacote atravessa, o TTL diminui em 1; se chegar a 0,
+                o roteador descarta o pacote e pode retornar uma 
+                mensagem ICMP de tempo esgotado.
+            </li>
+            <li>
+                <span class="destaque">Protocolo</span>: Identifica qual protocolo da camada superior
+                está encapsulado no pacote - por exemplo, 6 para <span class="destaque">TCP</span>,
+                17 para <span class="destaque">UDP</span> ou 1 para <span class="destaque">ICMP</span>.
+            </li>
+            <li>
+                <span class="destaque">Endereçamento de Origem e Destino</span>: Os dois endereços IPv4
+                de 32 bits que guiam o roteamento ponta a ponta.
+            </li>
+            <li>
+                <span class="destaque">Fragmentação(Identificação, Flags, Deslocamento)</span>:
+                Permite que pacotes maiores que o <span class="destaque">MTU</span>(Maximum 
+                Transmission Unit) de um enlace sejam divididos
+                em fragamentos menores e remontados no destino.
+            </li>
+        </ul> 
+
+        <img src="img/ipv42.png" class="img-ipv4" />
+        
+        <h4> Limitações do <span class="destaque">IPv4</span> </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">Escassez de endereços</span>: 32 bits já não atendem nativamente
+                à escala global sem <span class="destaque">NAT e CGNAT</span>(que adicionam complexidade
+                e podem dificultar conexões diretas).
+            </li>
+            <li>
+                <span class="destaque">Cabeçalho e roteamento mais pesados</span>: Inclui cheksum de 
+                cabeçalho(recalculado a cada salto) e suporte â fragmentação
+                em roteadores intermediários, direferentemente do <span class="destaque">IPv6</span>,
+                que simplifica o cabeçalho e amplia o espaço de endereçamento
+                para 128 bits.
+            </li>
+        </ul>
+
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+
+    /************************************************************************ */
+
+    "ipv6": {
+        titulo: "Camada IPv6",
+        conteudo: `
+
+        <p>
+            O <span class="destaque">IPv6</span>(Internet Protocol Version 6) é a evolução moderna
+            do protocolo da <span class="destaque">Camada de Rede</span>(Camada 3 do OSI/Camada de Internet
+            do TCP/IP), criado para resovlver o esgotamento de endereços do
+            IPv4 e modernizar o roteamento e a autoconfiguração na rede.
+        </p>
+
+        <p>
+           Enquanto o IPv4 usa endereços de 32 bits em decimal pontuado, o IPv6
+           expande o espaço de endereçamento para <span class="destaque">128 bits</span> - oferencendo
+           cerca de <span class="destaque">3,4 x 10^38</span> endereços(mais de 340 undecilhões), o 
+           suficiente para atribuir endereços globais únicos a bilhões
+           de dispositivos sem depender do NAT tradicional como solução
+           de escassez.
+        </p>
+
+        <h4> Formato e Regras de Abreviação do Endereço <span class="destaque">IPv6</span> </h4>
+
+        <p>
+            Um endereço IPv6 completo tem <span class="destaque">128 bits</span>, divididos
+            em <span class="destaque">8 blocos (hextetos) de 16 bits</span> cada, escrito em 
+            <span class="destaque">hexadecimal</span> e separados por dois-pontos(:). Exemplo
+            completo: 
+        </p>
+
+        <p>
+            <span class="destaque">2001:0db8:85a3:0000:0000:8a2e:0370:7334</span>
+        </p>
+
+        <p>
+            Para facilitar a leitura e a escrita, existem duas
+            regras de abreviação:
+        </p>
+
+        <ol>
+            <li>
+                <span class="destaque">Zero à esquerda em cada bloco podem ser omitidos</span>:
+                0db8 vira db8, 0000 vira 0, e 0370 vira 370.
+            </li>
+            <li>
+                <span class="destaque">Uma única sequência continua de blocos compostos
+                apenas por zeros pode ser substituida por :::</span> no 
+                exemplo acima, o trecho :0000:0000 pode virar ::,
+                resultando em 2001:db8:85a3::8a2e:370:7334 O
+                :: só pode aparecer uma vez por endereço para não
+                gerar ambiguidade na contagem dos blocos.
+            </li>
+        </ol>
+
+        <img src="img/ipv6.png" class="img-ipv6" />
+
+        <h4> Cabeçalho Simplificado e Principais Mudanças em Relação ao <span class="destaque">IPv4</span> </h4>
+
+        <p>
+            Apesar de os endereços serem muito maiores, o <span class="destaque">cabeçalho
+            fixo do IPv6 tem 40 bytes</span> e é mais enxuto e previsível
+            que o do IPv4: ele remove campos redundantes ou custosos
+            durante o encaminhamento como o  Header Cheksum (já 
+            coberto nas camadas de enlace e transporte/aplicação)
+            e o campo de opções de tamanho variáveis, substituido
+            por Extension Headers quando necessário.
+        </p>
+
+        <p>
+            Alguns campos e conceitos importantes do IPv6:
+        </p>
+
+        <ul>
+            <li>
+                <span class="destaque">Versão(Version)</span>: Valor 6 para identificar IPv6.
+            </li>
+            <li>
+                <span class="destaque">Classe de Tráfego(Traffic Class) e Rótulo de Fluxo(Flow Label)</span>:
+                Facilitam a priorização de pacotes e o tratamento de fluxos 
+                contínuos(como áudio, vídeo e tempo real).
+            </li>
+            <li>
+                <span class="destaque">Tamanho da Carga Útil(Payload Length)</span>: Indica o tamanho
+                dos dados que seguem o cabeçalho fixo de 40 bytes.
+            </li>
+            <li>
+                <span class="destaque">Próximo Cabeçalho(Next Header)</span>: Indica o tipo do cabeçalho
+                seguinte(por exemplo, TCP, UDP, ICMPv6 ou um cabeçalho
+                de exteensão).
+            </li>
+            <li>
+                <span class="destaque">Limite de Saltos(Hop Limit)</span>: Cumpre o mesmo papel do 
+                <span class="destaque">TTL</span> no iPv4 - decrementa em 1 a cada roteador e 
+                descarta o pacote se chegar a 0 para impedir loops.
+            </li>
+        </ul>
+
+        <img src="img/ipv62.png" class="img-ipv6" />
+
+        <h4> Recursos Práticos e Transição(Dual-Stack) </h4>
+
+        <ul>
+            <li>
+                <span class="destaque">SLAAC e NDP</span>: Em vez de depender exclusivamente de
+                broadcast e <span class="destaque">NAT</span>, o IPv6 utiliza o <span class="destaque">NDP</span>(Neighbor 
+                Discovery Protocol) e o <span class="destaque">SLAAC</span>(Stateless 
+                Address Autoconfiguration) para que os dispositivos
+                descubram roteadores, configurem endereços auto-
+                maticamente com base no prefixo da rede e evitem
+                conflitos na camada de rede - sem excluir o uso
+                de <span class="destaque">DHCPv6</span> quando o ambiente exige controle
+                centralizado adicioal.
+            </li>
+            <li>
+                <span class="destaque">Sem Broadcast</span>: O IPv6 substitui o broadcast do 
+                IPv4 por endereços multicast mais eficientes,
+                evitando que todos os hosts da rede precisem
+                processar tráfego irrelevante.
+            </li>
+            <li>
+                <span class="destaque">Convivência na Internet</span>: Como a Internet não migrou
+                de um dia para o outro, as redes atuais operam em grande
+                parte em <span class="destaque">Dual-Stack</span>(rodando IPv4 e IPv6 simultaneamente),
+                apoiadas por mecanismos como túneis e tradução quando
+                necessário.
+            </li>
+        </ul> 
+        
+        <h4> IPv4 vs IPv6 em Resumo </h4>
+
+        <table>
+            <tr>
+                <td> <span class="destaque">Característica</span> </td>
+                <td> <span class="destaque">IPv4</span> </td>
+                <td> <span class="destaque">IPv6</span> </td>
+            </tr>
+            <tr>
+                <td> Tamanho </td>
+                <td> 32 bits(~4,29 bilhões de endereços) </td>
+                <td> 128 bits(~340 undecilhões de endereços) </td>
+            </tr>
+            <tr>
+                <td> Notação </td>
+                <td> Decimal pontuado(ex: 192.168.1.1) </td>
+                <td> Hexadecimal com : e abreviação :: </td>
+            </tr>
+            <tr>
+                <td> Cabeçalho fixo </td>
+                <td> 20 bytes(com campos variáveis e checksum de cabaçalho) </td>
+                <td> 40 bytes fixos e simplificados </td>
+            </tr>
+            <tr>
+                <td> Broadcast </td>
+                <td> Sim </td>
+                <td> Não(usa multicast e anycast) </td>
+            </tr>
+            <tr>
+                <td> Uso de NAT </td>
+                <td> Amplamente necessário para contornar escassez </td>
+                <td> Não é necessário para ampliar endereços </td>
+            </tr>
+        </table>
+
+        <a href="javascript:history.back()"><span class="voltar"> voltar </span></a>
+        `
+    },
+
+
+
 }
